@@ -1,0 +1,8 @@
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: skyblue;/*背景色*/
+    text-align:center;
+    line-height: 100px;/* ←文字を上下に中央揃え */
+  }
