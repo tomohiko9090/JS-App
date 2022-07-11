@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>追加課題6</title>
+</head>
+<body>
+  <p>日付を入力してください。 <input type="number" id="month">月
+    <input type="number" id="day">日 <button id="run">決定</button></p>
+  <p id="result"></p>
+  <script>
+     var result = document.querySelector("#result");
+
+     function matchToday() {
+       var month = parseInt(document.querySelector("#month").value);
+       var day = parseInt(document.querySelector("#day").value);
+
+       var date = new Date();
+       var now_m = date.getMonth() + 1;
+       var now_d = date.getDate();
+
+       if (month === now_m && day === now_d) {
+         result.innerHTML = "今日の日付と一致します。";
+       } else {
+         result.innerHTML = "今日の日付と一致しません。";
+       }
+     }
+
+    var run = document.querySelector("#run");
+    run.addEventListener('click', matchToday);
+  </script>
+</body>
+</html>

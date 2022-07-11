@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+</head>
+<body>
+  <h1>DOMによる要素の取得</h1>
+  <p id="summary"></p>
+  <ul>
+    <li>querySelectorを使う方法</li>
+    <li>querySelectorAllを使う方法</li>
+  </ul>
+  <script>
+    var h1 = document.querySelector("h1");
+    h1.style.color = "#004466";
+    var summary = document.querySelector("#summary");
+    summary.innerHTML = "CSSセレクタで要素を取得できます。";
+    var li = document.querySelectorAll("ul li");
+    for (var i = 0; i < li.length; i++) {
+   		li[i].style.fontStyle = "italic";
+  	}
+  </script>
+</body>
+</html>

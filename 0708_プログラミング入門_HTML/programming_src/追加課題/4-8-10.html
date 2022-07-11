@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>追加課題10</title>
+  <style>
+    h1 {
+      font-size: 1.5em;
+      text-align: center;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    td {
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>九九表</h1>
+  <table border="1" id="multiplication"></table>
+  <script>
+  var table = document.querySelector("#multiplication");
+
+  for(i = 1; i <= 9; i++){
+    tr = document.createElement("tr");
+    for(j = 1; j <= 9; j++){
+      td = document.createElement("td");
+      td.innerHTML = j + " * " + i + " = " + i*j;
+      tr.appendChild(td);
+    }
+    table.appendChild(tr);
+  }
+  </script>
+</body>
+</html>
