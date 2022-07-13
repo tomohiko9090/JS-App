@@ -1,0 +1,8 @@
+.box {
+    border: #4e7bcc 1px solid; /*境界線の指定*/
+    padding:10px;
+    margin:0;
+    padding:0;
+    height: 100px;
+    width: 100px;
+    }
