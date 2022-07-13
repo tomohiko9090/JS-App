@@ -26,6 +26,10 @@
 -- ORDERBY（順番を決める。どのカラムを昇順or降順にするか）
 -- TOP（LIMIT）（上位何件を結果として出すか）
 
+
+  
+
+
 -- 問題1
 select sum(cost), avg(cost), min(cost), max(cost) from product;
 
@@ -63,14 +67,7 @@ select distinct emp_id from packedsales order by emp_id;
 
 
 -- 表の結合
-<employee>
- emp_id | dept_id |  emp_name   |  birthday  |  hiredate  | sex |   sal   |  comm 
 
-<department>
- dept_id | dept_name |  loc   | mgr_id | adept_id 
-
-<product>
- prod_id |   prod_name    | model_no |   cost   | discount 
 
 
 select e.emp_id, e.emp_name, d.dept_id, d.dept_name
@@ -86,4 +83,110 @@ select e.emp_id, e.emp_name, d.dept_id, d.dept_id, d.dept_name, d.mgr_id, e2.emp
     from employee e join department d on e.dept_id = d.dept_id
     join employee e2 on d.mgr_id = e2.emp_id; 
 
-select distinct e.emp_id, e.emp_name, p.prod_id, p.
+select distinct e.emp_id, e.emp_name, p.prod_id, p.prod_name, c.cust_id, c.cust_name
+    from employee e
+    join packedsales ps on e.emp_id = ps.emp_id
+    join customer c on ps.cust_id = c.cust_id
+    join sales s on ps.psales_no = s.psales_no
+    join product p on s.prod_id = p.prod_id
+ORDER by e.emp_id;
+
+select d.dept_id, d.dept_name, count(*), sum(e.sal), avg(e.sal), min(e.sal), max(e.sal)
+    from employee e JOIN department d on e.dept_id = d. dept_id
+    GROUP by d.dept_id, d.dept_name
+    order by d.dept_id;
+
+select e.emp_id, e.emp_name, d.dept_id, d.dept_name
+    from employee e 
+    join department d 
+    USING(dept_id); #ここの列名が一緒なときはこれが使える
+
+select e.emp_id, e.emp_name, d.dept_id, d.dept_name
+    from employee e 
+    natural join department d; #
+
+select * from employee cross join department;
+
+select e.emp_id, e.emp_name, d.dept_id, d.dept_name
+    from employee e 
+    left join department d on e.dept_id = d.dept_id;
+
+select e.emp_id, e.emp_name, d.dept_id, d.dept_name
+    from employee e right join department d on e.dept_id = d.dept_id;
+
+select e.emp_id, e.emp_name, d.dept_id, d.dept_name
+    from employee e full join department d on e.dept_id = d.dept_id;
+
+
+
+
+
+-- 1
+select c.cust_name, c.address, p.delivery_date
+    from customer c
+    join packedsales p on c.cust_id = p.cust_id;
+
+-- 2
+select p.prod_name, s.quantity*s.price as amount
+    from customer c
+    join sales s on p.prod_id = s.prod_id
+    WHERE s.quantity >= 3;
+
+-- 3
+select ps.psales_no, ps.psales_date, ps.total, prod_id, s.quantity, s.price
+    from customer c
+    join packedsales ps on c.cust_id = ps.cust_id
+    join sales s on ps.psales_no = s.psales_no
+    where c.cust_name like '田中%';
+
+-- 4
+select e.emp_id, e.emp_name, avg(ps.total)
+    from packedsales ps
+    join employee e on ps.emp_id = e.emp_id
+    group by e.emp_id
+    order by e.emp_id;
+
+-- 5
+select s.prod_id, p.prod_name, sum(s.price), sum(s.quantity)
+    from sales s
+    join product p on s.prod_id = p.prod_id
+    group by s.prod_id, p.prod_name
+    having sum(s.price) >= 500000
+    order by s.prod_id, p.prod_name;
+
+-- 6
+select p.prod_name, sum(s.quantity*s.price) as total
+    from product p
+    join sales s on p.prod_id = s.prod_id
+    group by p.prod_name
+    order by total desc;
+
+-- 7
+SELECT c.cust_name, ps.cust_address, ps.delivery_date, p.prod_name, s.quantity
+    from packedsales ps
+    join customer c on ps.cust_id = c.cust_id
+    join sales s on ps.psales_no = s.psales_no
+    join product p on s.prod_id = p.prod_id
+    where ps.psales_no = 3;
+
+
+
+
+
+-- <employee>
+--  emp_id | dept_id |  emp_name   |  birthday  |  hiredate  | sex |   sal   |  comm 
+
+-- <department>
+--  dept_id | dept_name |  loc | mgr_id | adept_id 
+
+-- <product>
+--  prod_id | prod_name | model_no |   cost   | discount 
+
+-- <customer>
+--  cust_id |  cust_name  |   address   |   tel   |   fax      
+
+-- <packedsales>
+--  psales_no | psales_date | emp_id | cust_id |   cust_address  |   cust_tel   | delivery_date | delivery_time |   total   | carriage | excise  
+
+-- <sales>
+--  sales_no | psales_no | prod_id | quantity |  price 
