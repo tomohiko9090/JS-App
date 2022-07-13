@@ -1,8 +1,17 @@
-.box {
-    border: #4e7bcc 1px solid; /*境界線の指定*/
-    padding:10px;
-    margin:0;
-    padding:0;
+/* .box { */
+    /* padding:10px; */
+    /* margin:0; */
+    /* padding:0; */
+    /* height: 100px;
+    width: 100px;
+	background: #4e7bcc;
+    } */
+
+span {
+    display: inline;
+    margin:10px;
+    background: #4e7bcc;
     height: 100px;
     width: 100px;
-    }
+	background: #4e7bcc;
+} 
