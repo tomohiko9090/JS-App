@@ -4,9 +4,9 @@
 // 4. その際、中の数字が小さいboxから減っていく
 
 function add_box(){
-  add_bottun_push += 1;
+  drow_box += 1;
   let box_all = "";  
-  for (i=1; i<=add_bottun_push; i++){
+  for (i=1; i<=drow_box; i++){
     box_text = "<span>" + i + "</span>"
     box_all = box_text + box_all
   }
@@ -14,17 +14,16 @@ function add_box(){
 }
 
 function del_add(){
-  del_bottun_push += 1
+  drow_box -= 1
   let box_all = "";  
-  for (i=1; i<=add_bottun_push-del_bottun_push; i++){
+    for (i=1; i<=drow_box; i++){
     box_text = "<span>" + i + "</span>"
     box_all = box_text + box_all
   }
   box.innerHTML = box_all
 }
 
-let add_bottun_push = 0;
-let del_bottun_push = 0
+let drow_box = 0;
 
 let box = document.querySelector("#box")
 let add = document.querySelector("#add")
