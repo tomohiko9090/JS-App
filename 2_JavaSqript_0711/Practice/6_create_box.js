@@ -8,7 +8,7 @@ function add_box(){
   let box_all = "";  
   for (i=1; i<=add_bottun_push; i++){
     box_text = "<span>" + i + "</span>"
-    box_all += box_text
+    box_all = box_text + box_all
   }
   box.innerHTML = box_all
 }
@@ -16,9 +16,9 @@ function add_box(){
 function del_add(){
   del_bottun_push += 1
   let box_all = "";  
-  for (i=1+del_bottun_push; i<=add_bottun_push; i++){
+  for (i=1; i<=add_bottun_push-del_bottun_push; i++){
     box_text = "<span>" + i + "</span>"
-    box_all += box_text
+    box_all = box_text + box_all
   }
   box.innerHTML = box_all
 }
