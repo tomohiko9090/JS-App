@@ -190,3 +190,15 @@ SELECT c.cust_name, ps.cust_address, ps.delivery_date, p.prod_name, s.quantity
 
 -- <sales>
 --  sales_no | psales_no | prod_id | quantity |  price 
+
+
+
+
+
+
+
+
+
+
+
+
