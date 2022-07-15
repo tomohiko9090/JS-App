@@ -47,3 +47,4 @@ let dice_third = document.querySelector("#dice_third")
 
 let result = document.querySelector("#result")
 
+x
