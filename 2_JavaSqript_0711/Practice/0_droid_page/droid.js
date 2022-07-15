@@ -9,8 +9,8 @@ function speakDroid(msg){
 
 // マウスオーバー中は画像変更
 let droid = document.querySelector("#droid");
-droid.addEventListener("mouseover", function(){chgImg("robot_image/hello.gif", droid)});
-droid.addEventListener("mouseout", function(){chgImg("robot_image/droid.gif", droid)});
+droid.addEventListener("mouseover", function(){chgImg("robot_image/hello.gif")});
+droid.addEventListener("mouseout", function(){chgImg("robot_image/droid.gif")});
 
 let speak = document.querySelector("#speak");
 let breaks = document.querySelector("#break");

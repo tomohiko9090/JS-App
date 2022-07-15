@@ -189,7 +189,28 @@ SELECT * FROM customer ORDER BY cust_id; -- 消えているのを確認
 SELECT * FROM employee ORDER BY emp_id; -- 1000円加わっているのを確認
 
 -- トランザクション実験
+-- 0. データを読み込む
+\i CreateAccountData.sql
+
 -- 1. 2つターミナルを開く
+
 -- 2. 1つ目のターミナルでトランザクションのあるファイルを読み込み
+\i TransferAccountData.sql
+
 -- 3. すぐに、2つ目ののターミナルで同じトランザクション処理を行う
+\i TransferAccountData.sql
+
 -- 4. すると、1つ目のターミナルでトランザクション処理が終わるのを待ってから、2つ目のターミナルでのトランザクション処理が始まった！
+
+
+
+-- ①給料が一番小さい値を探せ
+SELECT min(sal) from employee
+
+-- ②給料が一番小さい人のidを探せ
+select emp_id from employee where sal = (①)
+
+-- adept_idが40の人のmgr_idを変更
+update department
+    set mgr_id = (②)
+    where adept_id = 40;
