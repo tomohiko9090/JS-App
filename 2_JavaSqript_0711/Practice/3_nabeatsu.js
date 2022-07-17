@@ -20,7 +20,7 @@ function nabeastu(num){
   if (text.length === 2){
     if (num % 3 === 0 || text.match(/3/)){
 
-      let num_list = ('00' + num).split(''); //1桁ずつ配列に変換
+      let num_list = String(num).split(''); //1桁ずつ配列に変換
       let r1 = num_list.pop(); //1桁目
       let r2 = num_list.pop(); //2桁目
       

@@ -1,0 +1,19 @@
+.button{
+  display: inline-block;
+  background: #A5CA95;
+  /* margin: 0 10px; */
+  padding: 10px 15px;
+  border-radius: 4px;
+  color: black;
+  text-decoration: none;
+  }
+
+.delete_button{
+  display: inline-block;
+  background: #E06766;
+  margin: 10px 10px;
+  padding: 2px 15px;
+  border-radius: 4px;
+  color: black;
+  text-decoration: none;
+  }
