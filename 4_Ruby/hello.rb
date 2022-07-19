@@ -12,7 +12,6 @@ puts "\nテスト3"
 # birthday = gets.to_i #getsでターミナル受付できる
 # age = (today - birthday) / 10000 #これで誕生日が計算できるという真実
 # name = gets
-v
 
 puts "\nテスト4"
 user_name = "葛葉"  
@@ -253,3 +252,104 @@ end
 
 puts "\nテスト28"
 3.times{|i| puts i}
+
+
+# nilは、nullと一緒!
+# returnがnilになる問題は結構むずい！
+puts "\nテスト29"
+def aaa()
+    # puts "bbb"
+    return "bbb"
+end
+
+aaa()
+c = aaa()
+puts c
+
+
+puts "\nテスト30"
+class Hello
+    def hello
+        puts "Hello Ruby!"
+    end
+    def bye
+        puts "Good-bye."
+    end
+end
+
+g = Hello.new #Helloクラスをgで呼べるインスタンスを生成しますよ〜
+g.hello
+g.bye
+
+puts "\nテスト31"
+class Hello
+    def initialize(name)
+        @name = name
+    end
+    def hello
+        puts "Hello #{@name}!"
+    end
+    def bye
+        puts "Good-bye #{@name}."
+    end
+end
+
+fred = Hello.new("Fred")
+fred.hello
+fred.bye
+
+puts "\nテスト32"
+class Cat
+    def initialize(name, hinsyu, nakigoe="にゃー")
+        @name = name
+        @hinsyu = hinsyu
+        @nakigoe = nakigoe
+    end
+    def naku
+        puts @nakigoe
+    end
+    def introduce
+        puts "私、#{@name}と申します。#{@hinsyu}"
+    end
+
+    # クラスメソッド
+    def Cat.shukai 
+        puts "しゃー！！！！"
+        puts "みゃー！！！！"
+    end
+
+end
+
+cat1 = Cat.new("タマ", "雑種")
+cat1.naku
+
+cat2 = Cat.new("タマ", "雑種", "みゃーお")
+cat2.introduce
+
+puts "\nテスト33"
+Cat.shukai #これでも呼べる
+
+class Product
+    Tax_rate = 0.08
+    @@tax_rate = 0.1
+
+    def initialize(name, price)
+        @name = name
+        @price = price
+    end
+    def display
+        puts "#{@name}の税込み価格は#{self.tax}円です"
+    end
+    def tax
+        @price += (@price * Tax_rate).to_i
+    end
+    def Product.show_tax_rate
+        "消費税率は#{(@@tax_rate * 100).to_i}%です。#{@name}" #returnの省略
+    end
+end
+
+apple = Product.new("りんご", 100)
+apple.display
+p apple.tax
+
+puts Product.show_tax_rate
