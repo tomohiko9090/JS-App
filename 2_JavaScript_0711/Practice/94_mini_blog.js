@@ -17,7 +17,7 @@ function load() {
 
     //3.削除ボタンの生成 キーが増えたら削除ボタンが生成
     delete_button = `<input type='button' class='delete_button' id='${key}' value='削除'>`
-    mydata += delete_button + key + "　" + data + "<br>"
+    mydata += delete_button + key + "　" + data + "<br>" + "<hr>" + "<br>" 
   }
   log.innerHTML = mydata;
 

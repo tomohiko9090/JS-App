@@ -330,7 +330,7 @@ puts "\nテスト33"
 Cat.shukai #これでも呼べる
 
 class Product
-    Tax_rate = 0.08
+    Tax_rate = 0.08 #これでもできるくね？
     @@tax_rate = 0.1
 
     def initialize(name, price)
@@ -344,7 +344,7 @@ class Product
         @price += (@price * Tax_rate).to_i
     end
     def Product.show_tax_rate
-        "消費税率は#{(@@tax_rate * 100).to_i}%です。#{@name}" #returnの省略
+        "消費税率は#{(@@tax_rate * 100).to_i}%です。" #returnの省略
     end
 end
 
@@ -353,3 +353,216 @@ apple.display
 p apple.tax
 
 puts Product.show_tax_rate
+
+puts "\nテスト34"
+module Admin
+    class User
+        def login()
+            puts "管理者としてログイン"
+        end
+    end
+end
+
+class User
+    def login()
+        puts "一般ユーザーとしてログイン"
+    end
+end
+
+admin = Admin::User.new #モジュールを使う時の記法
+admin.login()
+user = User.new
+user.login()
+
+
+puts "\nテスト35"
+module Camera
+    def picture
+        puts "写真を撮影"
+    end
+    def movie
+        puts "動画を撮影"
+    end
+end
+
+module Internet
+    def connect
+        puts "インターネットに接続"
+    end
+    def browse
+        puts "インターネットで調べたもの"
+    end
+    def purchase
+        puts "インターネットでお買い得"
+    end
+end
+
+module Office
+    def word
+        puts "ワープロで文書を書く"
+    end
+    
+    def excel
+        puts "表計算でデータ分析"
+    end
+end
+
+class Computer
+    include Camera
+    include Internet
+    include Office
+    def play
+        puts "ソリティアで遊ぶ"
+    end
+end
+
+pc = Computer.new
+pc.play
+pc.picture
+pc.connect
+pc.purchase
+pc.word
+
+
+puts "\nテスト36"
+#  アクセスメソッドは、参照と代入がある
+# 参照のやり方はこちら
+class Human
+    def initialize(name, age)
+        @name = name
+        @age = age
+        puts "こんにちは、#{name}です。"
+    end
+    def name
+        return @name
+    end
+    def age
+        if @age < 18
+            puts "未成年です！"
+        end
+        return @age
+    end
+end
+
+hanako = Human.new("佐藤花子", 10)
+puts hanako.age
+
+
+puts "\nテスト37"
+# カプセル化によってインスタンス変数には代入できないが、下のようにメソッドが定義されれば
+class Human
+    def initialize(name, age)
+        @name = name
+        @age = age
+        puts "こんにちは、#{name}です。"
+    end
+    #　インスタンス変数の参照
+    def name
+        return @name
+    end
+    def age
+        return @age
+    end
+
+    # インスタンス変数の代入
+    def name=(name) #これがないとhanako.nameでアクセスできない！
+        @name = name
+        return @name
+    end
+    def age=(age) 
+        @age = age
+        return @name
+    end
+end
+
+# hanako = Human.new("佐藤花子", 10)
+# hanako.name=("佐藤はなこ") #「name=」というメソッド
+# puts hanako.name #あたかもインスタンス変数にアクセスしたかのようにふるまってくれる！
+# puts hanako.age
+
+
+puts "\nテスト38"
+class Human
+    attr_accessor :name, :age
+    def initialize(name, age)
+        @name = name
+        @age = age
+        puts  "こんにちは、#{@name}です。"
+    end
+end
+
+hanako = Human.new("佐藤花子", 10)
+hanako.name("山田花子")
+puts hanako.name
+puts hanako.age
+
+
+puts "\nテスト39"
+class AccessTest
+    # private :private_method #この書き方でも良い
+    def public_method
+        puts "パブリックメソッド"
+    end
+    private
+    def private_method
+        puts "プライベートメソッド"
+    end
+end
+
+at = AccessTest.new
+at.public_method
+# at.private_method #これはできない！
+
+
+puts "\nテスト40"
+# スーパークラス
+class Animal
+    def eat
+        puts "えさを食べます。"
+    end
+    def sleep
+        puts "眠ります。"
+    end
+end
+
+# サブクラス
+class Dog < Animal 
+    def bow 
+        puts "わんわん！"
+    end
+end
+
+class Bird < Animal
+    def sing
+        puts "ぴぃぴぃ"
+    end
+end
+
+pochi = Dog.new
+pochi.eat
+pochi.bow 
+pochi.sleep
+
+pchan = Bird.new
+pchan.eat
+pchan.sing
+pchan.sleep
+
+p Dog.ancestors
+
+
+puts "\nテスト40"
+# 同名のメソッドを呼び出せる
+class a
+    def x(str)
+        puts str * 3
+    end
+end
+
+class B < A 
+    def x(str)
+        super(str)
+        puts "END"
+    end
+end
+
