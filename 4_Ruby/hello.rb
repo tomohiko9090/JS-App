@@ -492,7 +492,7 @@ class Human
 end
 
 hanako = Human.new("佐藤花子", 10)
-hanako.name("山田花子")
+hanako.name=("山田花子")
 puts hanako.name
 puts hanako.age
 
@@ -553,7 +553,7 @@ p Dog.ancestors
 
 puts "\nテスト40"
 # 同名のメソッドを呼び出せる
-class a
+class A
     def x(str)
         puts str * 3
     end
@@ -566,3 +566,196 @@ class B < A
     end
 end
 
+
+puts "\nテスト41"
+a = 234
+printf("数字は%sです。2進数にすると、%bです", a, a)
+
+
+puts "\nテスト42"
+def callback
+    puts "開始します"
+    yield
+    yield
+    yield
+    puts "終了します"
+end
+
+callback {puts "いろは"}
+callback {puts "にほへと"}
+
+puts "\nテスト43"
+# 組み込み関数を変化させている結構特殊
+class String
+    def vertical
+        for i in 0...self.length
+            yield self[i] + "\n" #1文字ごとに改行
+        end
+    end
+end
+
+"Ruby".vertical do |c|
+    printf c
+end
+
+str = String.new("いえい")
+str.vertical do |c|
+    printf c
+end
+
+puts "\nテスト43"
+def println(*str) #何個引数あってもいいよー 
+    puts "#{str.size}個の引数"
+    puts str
+end
+
+println "Hello World" 
+puts
+println "abc", 123 #puts["abc", 123]になるのと同じ
+
+class Train
+    def gse(*numbers)
+      puts "今日の特急は#{numbers.join}です。"
+    end
+  end
+
+train = Train.new
+train.gse("1号","2号","3号","4号")
+
+
+puts "\nテスト44"
+# なんとこれでいける。。。きもい
+def symtest(q,w,a)
+    puts q
+    puts w
+    a.each{|b| p b}
+end
+   
+symtest 3, "ありがとう", Ruby: 1, Python: 2, Perl: 3
+
+
+puts "\nテスト45"
+var = true
+var ||= 1
+var &&= 1
+var = false
+var &&= 1
+var ||= 1
+var = nil
+var &&= 1
+var ||= 1
+
+puts "\nテスト46"
+#関係ないですが、varの次の行で改行しても大丈夫らいいですね
+# print "input [1-3]: "
+# a = gets.to_i
+# var = 
+# if a == 1 then
+#     "Ruby"
+# elsif a == 2 then
+#     "Python"
+# else
+#     "Perl"
+# end
+
+# puts "var : #{var}"
+
+puts "\nテスト47"
+f = 1
+h = f 
+puts f.object_id
+puts h.object_id
+
+
+# Rubyには全てのオブジェクトにidが割り振られている
+
+puts "\nテスト48"
+# いろいろ
+puts 100_000_000
+
+include Math
+puts sqrt(9)
+puts 10.3.integer?
+
+puts "\nテスト49"
+# ビット演算
+puts a = 0b11001100
+puts ~a
+puts a | 0b01001100 
+puts a << 0b01001100
+
+puts a = 0b11001100
+printf("%b", a) 
+puts a.to_s(2) 
+
+
+
+puts "\nテスト50"
+puts %q{てんきゅー}
+p %w="Python hoge hoge"= #どんな記号でも%記号ならくくれるらしい笑
+ 
+puts "\nテスト51"
+#ヒアドキュメント
+text = <<'establish'
+"あなたの心にずっきゅんばっきゅんどっきゅんこんこんちゅちゅちゅちゅちゅかすこんねぅですestablish"
+establish
+"いえいいえいぱんぱんぱんいえいいえいぱんぱんぱんどうもデカキンです"
+
+p text
+
+
+puts "\nテスト52"
+str = "hello, ああああ" 
+p str.split(/,/)
+puts
+puts str.concat("Ruby")
+puts str.include?("e") #eって文字入ってる？
+puts str.index("o") #何文字目？
+puts str.rindex("o")#右から何文字目？
+
+puts "\nテスト53"
+p "Ruby".chomp
+p "Ruby".chomp! #破壊的メソッドも可能
+
+puts "\nテスト54"
+# 正規表現
+# パターン1：/文字列パターン/を使うと正規表現になるよ
+# パターン2：Regexp.new("文字列パターン")
+# パターン3： %r(文字列パターン)
+puts /cde/ =~ 'abcdefg' #数字が返ってくる　if文ならtureになるよ
+puts /cDe/i =~ 'abcdefg'
+
+puts "\nテスト54"
+str = "Ruby is adynamic, open sorce prpframming langage"
+if str.match(/Ruby/)
+    puts 'マッチしたよぉ'
+else
+    puts 'マッチしてないよん'
+end
+
+puts "\nテスト54"
+# まっちした値が入ってる
+/(^.).*(R...)/ =~ 'Programming Lnaguage Ruby' #()で括れば取り出せるよー。^は文頭。.1文字ならなんでもいいよ〜
+puts $1
+puts $2
+
+/(c.e)/ =~ 'abcdefg'
+puts $` #マッチした部分より前
+puts $& #マッチした部分
+puts $' #マッチした部分より後ろ
+
+
+puts "\nテスト55"
+# 文字列パターンの置換
+str = 'Perl PHP Python Perl PHP Python'
+puts str.sub(/Python/, 'おっぱっぴー') #最初にでてきたPythonのみ置換
+puts str.gsub(/Python/, 'おっぱっぴー') #Python全てを置換
+
+
+puts "\nテスト55"
+# メールアドレスがあってるかチェックする
+
+
+puts "\nテスト56"
+*ppap = "さくらさけ君の胸に〜♪", "ぴえん", "ぱおん" #可変引数はつまりハッシュ
+p ppap
