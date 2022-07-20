@@ -9,10 +9,12 @@
 </head>
 <body>
   <div><h1>ゆるゆる掲示板</h1></div>
-  <textarea id="textarea" rows="4" cols="40" type="text" placeholder="さっき起こったことを書いてみよう。"></textarea>
+  <textarea id="textarea" onkeyup="viewStrLen();" rows="4" cols="40" type="text" placeholder="さっき起こったことを書いてみよう。"></textarea>
   <div>
     <br>
     <input type="button" class="button" id="send" value="投稿するぅ">
+    <span>　　　　　　　　</span>
+    <span id="strLen">0文字</div>
   </div>
   <br>
   <div>

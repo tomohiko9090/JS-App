@@ -1,3 +1,8 @@
+function viewStrLen(){
+  var len = document.getElementById("textarea").value.length;
+  document.getElementById("strLen").innerText = len + "文字";
+}
+
 // 削除
 function delete_text(e){
   localStorage.removeItem(e.target.id)
