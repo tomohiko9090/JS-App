@@ -1,0 +1,165 @@
+<% names = params[:name] %>
+
+<h1>ステップ2</h1>
+<h3>プレイヤーの強さを9段階で評価してください。</h3>
+<form action="/result" method="post">
+        <dt>プレイヤー1 <%= names[0] %></dt>
+        <div class="dropdown">
+            <select name="strength[]">
+                <option value="">強さ</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+        <br>
+
+        <dt>プレイヤー2 <%= names[1] %></dt>
+        <div class="dropdown">
+            <select name="strength[]">
+                <option value="">強さ</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+        <br>
+        
+        <dt>プレイヤー3 <%= names[2] %></dt>
+        <div class="dropdown">
+            <select name="strength[]">
+                <option value="">強さ</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+        <br>
+
+        <dt>プレイヤー4 <%= names[3] %></dt>
+        <div class="dropdown">
+            <select name="strength[]">
+                <option value="">強さ</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+        <br>
+
+        <dt>プレイヤー5 <%= names[4] %></dt>
+        <div class="dropdown">
+            <select name="strength[]">
+                <option value="">強さ</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+        <br>
+
+        <dt>プレイヤー6 <%= names[5] %></dt>
+        <div class="dropdown">
+            <select name="strength[]">
+                <option value="">強さ</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+        <br>
+
+        <dt>プレイヤー7 <%= names[6] %></dt>
+        <div class="dropdown">
+            <select name="strength[]">
+                <option value="">強さ</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+        <br>
+
+        <dt>プレイヤー8 <%= names[7] %></dt>
+        <div class="dropdown">
+            <select name="strength[]">
+                <option value="">強さ</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <br>
+        </div>
+        <br>
+
+        <dt>プレイヤー9 <%= names[8]%></dt>
+        <div class="dropdown">
+            <select name="strength[]">
+                <option value="">強さ</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+    <br>
+    <br>
+    <a href="/input_name" class="btn btn-outline-warning">ステップ1に戻る</a>
+    <% names.each do |name|%>
+    <input type="hidden" name="name[]" value="<%= ERB::Util.html_escape(name) %>">
+    <% end %>  
+    <button type="submit" class="btn btn-outline-success">送信する</button>
+</form>
