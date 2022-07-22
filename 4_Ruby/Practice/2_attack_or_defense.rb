@@ -2,6 +2,7 @@
 def judge(you, enemy, number_of_winnig)
   p "a [Attack] OR d [Defense] : "
   p command = gets.to_s
+  sleep(2)
 
   case command
   when "a"
@@ -47,6 +48,3 @@ number_of_winnig = 0
 
 end
 puts ""
-
-
-
