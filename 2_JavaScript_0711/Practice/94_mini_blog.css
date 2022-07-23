@@ -1,23 +1,3 @@
-.button{
-  display: inline-block;
-  background: #A5CA95;
-  /* margin: 0 10px; */
-  padding: 10px 15px;
-  border-radius: 4px;
-  color: black;
-  text-decoration: none;
-  }
-
-.delete_button{
-  display: inline-block;
-  background: #E06766;
-  margin: 3px 10px;
-  padding: 2px 15px;
-  border-radius: 4px;
-  color: black;
-  text-decoration: none;
-  }
-
 h8{
   opacity: 0.4;
   text-align:right;
@@ -32,6 +12,13 @@ body{
     margin-left:auto;
     margin-right:auto;
     width:780px;
-    /* text-align:left; */
     }
 
+  .bg-img{
+    background-image: url("94_ゆるゆるくらげ.png");
+    background-size: 200px;
+    /* background-repeat: no-repeat; */
+    background-color:rgba(255,255,255,0.95);
+    background-blend-mode:lighten;
+    /* background-size: cover; */
+  }

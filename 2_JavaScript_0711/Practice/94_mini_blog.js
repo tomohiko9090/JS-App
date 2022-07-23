@@ -22,8 +22,8 @@ function load() {
     let checkbox = '<font size="5"><input class="form-check-input" type="checkbox" id="flexCheckDefault"></font>'
 
     //3.削除ボタンの生成 キーが増えたら削除ボタンが生成
-    delete_button = `<input type='button' class='btn btn-light delete_button' id='${key}' value='🗑'>`
-    mydata += checkbox + "　"+ data + delete_button + "<br>" + "　<h8>" + key + "</h8>" + "<br>" + "<hr>" + "<br>" 
+    delete_button = `<input type='button' class='btn btn-light delete_button' id='${key}' value='🗑' style="float: right;">`
+    mydata += checkbox + "　"+ data + delete_button + "<br>" + "<br>" + "　<h8 style='float: right;'>" + key + "</h8>" + "<br>" + "<hr>" + "<br>" 
   }
   log.innerHTML = mydata;
 
