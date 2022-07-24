@@ -1,0 +1,198 @@
+<%  
+    names = params[:name]
+    strengths = params[:strength]
+    table_type = params[:table_type]
+
+    pair = [names, strengths].transpose #転置
+    if table_type == "equally" || table_type == "level"
+      strength_list = pair.sort_by {|x| x[1]}.reverse!
+    end
+    if table_type == "random"
+      strength_list = pair.shuffle!
+    end
+%>
+
+<h1></h1>
+<h2>完成したリーグ表はこちら！</h2>
+<br>
+<div>
+    <h3>Aリーグ</h3>
+</table>
+    <table class="table table-hover">
+    <tr>
+      <th></th>
+      <th><%=
+        strength_list[0][0] 
+      %></th>
+      <th><%=
+         if table_type == "equally"
+          strength_list[5][0]
+         else
+          strength_list[1][0] end
+      %></th>
+      <th><%=
+        if table_type == "equally"
+          strength_list[6][0]
+        else
+          strength_list[2][0] end 
+      %></th>      
+    </tr>
+    <tr>
+      <td>
+      <%= strength_list[0][0] %>
+      </td> 
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><%=
+        if table_type == "equally"
+          strength_list[5][0]
+        else
+          strength_list[1][0] end 
+      %></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><%=
+        if table_type == "equally"
+          strength_list[6][0]
+        else
+          strength_list[2][0] end 
+      %></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    </table>
+</div>
+<br>
+<br>
+
+<div>
+    <h3>Bリーグ</h3>
+    <table class="table table-hover">
+    <tr>
+      <th></th>
+      <th><%=
+        if table_type == "equally"
+          strength_list[1][0]
+        else
+          strength_list[3][0] 
+        end %>
+      </th>
+      <th><%=
+        if table_type == "equally"
+          strength_list[4][0]
+        else
+          strength_list[4][0] 
+        end 
+      %></th>
+      <th><%=
+        if table_type == "equally"
+          strength_list[7][0]
+        else
+          strength_list[5][0] 
+        end 
+      %></th>      
+    </tr>
+    <tr>
+      <th><%=
+        if table_type == "equally"
+          strength_list[1][0]
+        else
+          strength_list[3][0] 
+        end 
+      %></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th><%=
+        strength_list[4][0] 
+      %></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th><%=
+        if table_type == "equally"
+          strength_list[7][0]
+        else
+          strength_list[5][0] 
+        end 
+      %></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    </table>
+</div>
+<br>
+<br>
+
+<div>
+    <h3>Cリーグ</h3>
+    <table class="table table-hover">
+    <tr>
+      <th></th>
+      <th><%=
+        if table_type == "equally"
+          strength_list[2][0]
+        else
+          strength_list[6][0] 
+        end 
+      %></th>
+      <th><%=
+        if table_type == "equally"
+          strength_list[3][0]
+        else
+          strength_list[7][0] 
+        end 
+      %></th>
+      <th><%=
+        strength_list[8][0] 
+      %></th>
+    </tr>
+    <tr>
+      <th><%=
+        if table_type == "equally"
+          strength_list[2][0]
+        else
+          strength_list[6][0] 
+        end 
+      %></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th><%=
+        if table_type == "equally"
+          strength_list[3][0]
+        else
+          strength_list[7][0] 
+        end 
+      %></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th><%=
+        strength_list[8][0] 
+      %></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    </table>
+</div>
+</dl>
+<a href="/input2_strength" class="btn btn-outline-warning">ステップ3に戻る</a>
+<a href="/" class="btn btn-outline-success">トップページへ</a>

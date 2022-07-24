@@ -1,0 +1,34 @@
+<%  names = params[:name] %>
+
+<h1>ステップ2</h1>
+<h3>プレイヤーの強さを9段階で評価してください。</h3>
+<br>
+<form action="/input3_type" method="post">
+        <% 9.times do |i|%>
+        <dt><%= "プレイヤー#{i+1}  「#{names[i]}」" %></dt>
+        <div class="dropdown">
+            <select name="strength[]">
+                <option value="">強さ</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+        <br>
+        <% end %> 
+    <br>
+    <br>
+    <a href="/input1_name" class="btn btn-outline-warning">ステップ1に戻る</a>
+
+    <% names.each do |name|%>
+    <input type="hidden" name="name[]" value="<%= ERB::Util.html_escape(name) %>">
+    <% end %>  
+
+    <button type="submit" class="btn btn-outline-success">　　次へ　　</button>
+</form>
