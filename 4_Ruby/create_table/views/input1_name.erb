@@ -1,4 +1,3 @@
-<%# <h1>ステップ1</h1> %>
 <ol class="stepBar step3">
   <li class="step current">STEP1</li>
   <li class="step">STEP2</li>
@@ -6,10 +5,11 @@
 </ol>
 
 <h3>プレイヤー名を入力してください。</h3>
+<br>
 <form action="/input2_strength" method="post">
     <dl>
         <dt>プレイヤー1</dt>
-        <dd><input type="text" name="name[]"></dd><br>
+        <dd><input type="text" name="name[]">fdsf</dd><br>
         <dt>プレイヤー2</dt>
         <dd><input type="text" name="name[]"></dd><br>
         <dt>プレイヤー3</dt>
@@ -27,6 +27,6 @@
         <dt>プレイヤー9</dt>
         <dd><input type="text" name="name[]"></dd><br>
     </dl>
-    <a href="/" class="btn btn-outline-warning">ホームに戻る</a>
-    <button type="submit" class="btn btn-outline-success">　　次へ　　</button>
+    <a href="/" class="btn btn-outline-success">ホームに戻る</a>
+    <button type="submit" class="btn btn-success" style="float: right;">　　次へ　　</button>
 </form>

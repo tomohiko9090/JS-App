@@ -8,6 +8,10 @@ get '/input1_name' do
     erb :input1_name
 end
 
+post '/input1_name' do 
+    erb :input1_name
+end
+
 post '/input2_strength' do 
     erb :input2_strength
 end

@@ -1,8 +1,12 @@
 <%  names = params[:name] 
     strengths = params[:strength]
 %>
+<ol class="stepBar step3">
+  <li class="step">STEP1</li>
+  <li class="step">STEP2</li>
+  <li class="step current">STEP3</li>
+</ol>
 
-<h1>ステップ3</h1>
 <h3>表の作り方を選んで下さい。</h3>
 <br>
 <form action="/table" method="post">
@@ -28,8 +32,7 @@
     </div>
     
     <br>
-    <a href="/input2_strength" class="btn btn-outline-warning">ステップ2に戻る</a>
-
+    
     <% names.each do |name|%>
     <input type="hidden" name="name[]" value="<%= ERB::Util.html_escape(name) %>">
     <% end %>  
@@ -37,6 +40,21 @@
     <% strengths.each do |strength|%>
     <input type="hidden" name="strength[]" value="<%= ERB::Util.html_escape(strength) %>">
     <% end %>  
-
-    <button type="submit" class="btn btn-outline-success">表を作る！</button>
+    <span>
+      <button type="submit" class="btn btn-success" style="float: right;">　　表を作る　　</button>
+    </span>
 </form>
+
+<span>
+  <form action="/input2_strength" method="post">
+    <% names.each do |name|%>
+    <input type="hidden" name="name[]" value="<%= ERB::Util.html_escape(name) %>">
+    <% end %>  
+
+    <% strengths.each do |strength|%>
+    <input type="hidden" name="strength[]" value="<%= ERB::Util.html_escape(strength) %>">
+    <% end %> 
+    
+    <input type="submit" class="btn btn-outline-success" value="ステップ2に戻る" style="float: left;">
+  </form>
+</span>
