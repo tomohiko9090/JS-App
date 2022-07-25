@@ -202,7 +202,7 @@
 <br>
 
 <span>
-  <form action="/input2_strength" method="post">
+  <form action="/input3_type" method="post">
     <% names.each do |name|%>
     <input type="hidden" name="name[]" value="<%= ERB::Util.html_escape(name) %>">
     <% end %>  
@@ -210,6 +210,8 @@
     <% strengths.each do |strength|%>
     <input type="hidden" name="strength[]" value="<%= ERB::Util.html_escape(strength) %>">
     <% end %> 
+
+    <input type="hidden" name="table_type" value="<%= table_type %>">
     
     <input type="submit" class="btn btn-outline-success" value="ステップ3に戻る" style="float: left;">
   </form>

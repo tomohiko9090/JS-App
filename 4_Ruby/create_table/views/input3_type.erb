@@ -1,5 +1,7 @@
-<%  names = params[:name] 
+<%  
+    names = params[:name] 
     strengths = params[:strength]
+    table_type = params[:table_type] #tableからデータ流し込み用
 %>
 <ol class="stepBar step3">
   <li class="step">STEP1</li>
@@ -11,21 +13,21 @@
 <br>
 <form action="/table" method="post">
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="table_type" id="equally" value="equally" checked>
+      <input class="form-check-input" type="radio" name="table_type" id="equally" value="equally" <%= "checked" if table_type=="equally" %>>
       <label class="form-check-label" for="flexRadioDefault1">
         1. 強さを均等にして表を作る
       </label>
     </div>
 
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="table_type" id="level" value="level">
+      <input class="form-check-input" type="radio" name="table_type" id="level" value="level" <%= "checked" if table_type=="level" %>>
       <label class="form-check-label" for="flexRadioDefault2">
         2. レベル別に表を作る
       </label>
     </div>
 
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="table_type" id="random" value="random">
+      <input class="form-check-input" type="radio" name="table_type" id="random" value="random" <%= "checked" if table_type=="random" %>>
       <label class="form-check-label" for="flexRadioDefault3">
         3. ランダムに表を作る
     </label>
