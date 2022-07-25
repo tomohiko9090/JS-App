@@ -11,9 +11,14 @@
       strength_list = pair.shuffle!
     end
 %>
+<ol class="stepBar step3">
+  <li class="step">STEP1</li>
+  <li class="step">STEP2</li>
+  <li class="step">STEP3</li>
+</ol>
 
 <h1></h1>
-<h2>完成したリーグ表はこちら！</h2>
+<h2><b>完成したリーグ表はこちら</b></h2>
 <br>
 <div>
     <h3>Aリーグ</h3>
@@ -38,31 +43,31 @@
       %></th>      
     </tr>
     <tr>
-      <td>
+      <th>
       <%= strength_list[0][0] %>
-      </td> 
+      </th> 
       <td></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
-      <td><%=
+      <th><%=
         if table_type == "equally"
           strength_list[5][0]
         else
           strength_list[1][0] end 
-      %></td>
+      %></th>
       <td></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
-      <td><%=
+      <th><%=
         if table_type == "equally"
           strength_list[6][0]
         else
           strength_list[2][0] end 
-      %></td>
+      %></th>
       <td></td>
       <td></td>
       <td></td>
@@ -194,5 +199,20 @@
     </table>
 </div>
 </dl>
-<a href="/input2_strength" class="btn btn-outline-warning">ステップ3に戻る</a>
-<a href="/" class="btn btn-outline-success">トップページへ</a>
+<br>
+
+<span>
+  <form action="/input2_strength" method="post">
+    <% names.each do |name|%>
+    <input type="hidden" name="name[]" value="<%= ERB::Util.html_escape(name) %>">
+    <% end %>  
+
+    <% strengths.each do |strength|%>
+    <input type="hidden" name="strength[]" value="<%= ERB::Util.html_escape(strength) %>">
+    <% end %> 
+    
+    <input type="submit" class="btn btn-outline-success" value="ステップ3に戻る" style="float: left;">
+  </form>
+</span>
+
+<a href="/" class="btn btn-info" style="float: right;">　トップページへ　</a>

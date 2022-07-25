@@ -365,6 +365,7 @@ puts "\nテスト34"
 # モジュールの二つの役割 1つ目「名前空間の提供」
 module Admin
     class User
+        TABLE_NAME = "ひょう"
         def login()
             puts "管理者としてログイン"
         end
@@ -372,6 +373,7 @@ module Admin
 end
 
 class User
+    TABLE_NAME = "ひょう"
     def login()
         puts "一般ユーザーとしてログイン"
     end
@@ -379,15 +381,21 @@ end
 
 admin = Admin::User.new
 admin.login()
+puts Admin::User::TABLE_NAME #定数もなんとよべる
+
 user = User.new
 user.login()
+puts User::TABLE_NAME #定数もなんとよべる
+
 
 
 puts "\nテスト35"
 # モジュールの二つの役割 2つ目「Mix-in」
 # 多重継承っぽいことが可能
 module Camera
+    A = "aa"
     def picture
+
         puts "写真を撮影"
     end
     def movie
@@ -397,6 +405,7 @@ end
 
 module Internet
     def connect
+
         puts "インターネットに接続"
     end
     def browse
@@ -422,6 +431,7 @@ class Computer
     include Internet
     include Office
     def play
+        p A
         puts "ソリティアで遊ぶ"
     end
 end
@@ -826,3 +836,21 @@ hash = {"A"=>"a", "B"=>"b", "C"=>"c"}
 hash.each{|alpha, beta|
     printf("%s, %s\n", beta, alpha)
 }
+
+puts "\nテスト66"
+p "abcdefghijklmnopqrstuvwxyz".scan(/.{3}/)
+
+str = "foobarbaz\r\n\r\n"
+p str.chomp('')
+
+
+
+printf "%s%s%s", "aa", "bb", "cc"
+printf "%s%s%s", "aa", "bb", "cc"
+puts
+puts
+p ["Ruby"] << "Python" << "PHP" << "Java"
+
+
+answer = "abc".to_i
+puts answer

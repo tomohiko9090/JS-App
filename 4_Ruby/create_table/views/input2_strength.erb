@@ -1,12 +1,16 @@
 <%  names = params[:name] %>
+<ol class="stepBar step3">
+  <li class="step">STEP1</li>
+  <li class="step current">STEP2</li>
+  <li class="step">STEP3</li>
+</ol>
 
-<h1>ステップ2</h1>
 <h3>プレイヤーの強さを9段階で評価してください。</h3>
 <br>
 <form action="/input3_type" method="post">
         <% 9.times do |i|%>
-        <dt><%= "プレイヤー#{i+1}  「#{names[i]}」" %></dt>
-        <div class="dropdown">
+        <dt><%= "プレイヤー#{i+1}  「#{names[i]}」" %>
+        <span class="dropdown">
             <select name="strength[]">
                 <option value="">強さ</option>
                 <option value="1">1</option>
@@ -19,16 +23,23 @@
                 <option value="8">8</option>
                 <option value="9">9</option>
             </select>
-        </div>
+        </span></dt>
         <br>
         <% end %> 
     <br>
     <br>
-    <a href="/input1_name" class="btn btn-outline-warning">ステップ1に戻る</a>
 
     <% names.each do |name|%>
     <input type="hidden" name="name[]" value="<%= ERB::Util.html_escape(name) %>">
     <% end %>  
 
-    <button type="submit" class="btn btn-outline-success">　　次へ　　</button>
+    <button type="submit" class="btn btn-success" style="float: right;">　　次へ　　</button>
+</form>
+
+<form action="/input1_name" method="post">
+    <% names.each do |name|%>
+    <input type="hidden" name="name[]" value="<%= ERB::Util.html_escape(name) %>">
+    <% end %>  
+
+    <input type="submit" class="btn btn-outline-success" value="ステップ1に戻る" style="float: left;">
 </form>
