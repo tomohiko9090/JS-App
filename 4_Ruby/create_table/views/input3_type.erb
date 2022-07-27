@@ -2,6 +2,10 @@
     names = params[:name] 
     strengths = params[:strength]
     table_type = params[:table_type] #tableからデータ流し込み用
+    p table_type
+    unless table_type
+      table_type = "equally"
+    end
 %>
 <ol class="stepBar step3">
   <li class="step">STEP1</li>

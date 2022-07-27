@@ -1,3 +1,4 @@
+ 
 body {
   margin: 0;
   display: flex;
@@ -114,6 +115,13 @@ p {
   padding: 0;
 }
 
-input[type=range] {
-  width:240px;
+input[type="range"] {
+  width:500px;
+  height: 50px;
+  background: aquamarine; /* バーの背景色 */
+
 }
+
+
+
+

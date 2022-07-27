@@ -11,33 +11,13 @@
 <h3>プレイヤー名を入力してください。</h3>
 <br>
 <form action="/input2_strength" method="post">
-    <dl>
-<<<<<<< HEAD
+<dl>
         <%(0..8).each do |i|%>
         <dt>プレイヤー<%=i+1%></dt>
         <dd><input type="text" name="name[]" value="<%= names[i] if names %>"></dd><br>
         <% end %> 
-=======
-        <dt>プレイヤー1</dt>
-</dd><br>
-        <dt>プレイヤー2</dt>
-        <dd><input type="text" name="name[]"></dd><br>
-        <dt>プレイヤー3</dt>
-        <dd><input type="text" name="name[]"></dd><br>
-        <dt>プレイヤー4</dt>
-        <dd><input type="text" name="name[]"></dd><br>
-        <dt>プレイヤー5</dt>
-        <dd><input type="text" name="name[]"></dd><br>
-        <dt>プレイヤー6</dt>
-        <dd><input type="text" name="name[]"></dd><br>
-        <dt>プレイヤー7</dt>
-        <dd><input type="text" name="name[]"></dd><br>
-        <dt>プレイヤー8</dt>
-        <dd><input type="text" name="name[]"></dd><br>
-        <dt>プレイヤー9</dt>
-        <dd><input type="text" name="name[]"></dd><br>
->>>>>>> 3792781 (files modify)
-    </dl>
-    <a href="/" class="btn btn-outline-success">ホームに戻る</a>
-    <button type="submit" class="btn btn-success" style="float: right;">　　次へ　　</button>
+</dl>
+<a href="/" class="btn btn-outline-success">ホームに戻る</a>
+<button type="submit" class="btn btn-success" style="float: right;">　　次へ　　</button>
 </form>
+</div>
