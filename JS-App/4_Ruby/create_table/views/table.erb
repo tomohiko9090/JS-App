@@ -1,0 +1,230 @@
+<%  
+    names = params[:name]
+    strengths = params[:strength]
+    table_type = params[:table_type]
+
+    pair = [names, strengths].transpose #転置
+    if table_type == "equally" || table_type == "level"
+      strength_list = pair.sort_by {|x| x[1]}.reverse!
+    end
+    if table_type == "random"
+      strength_list = pair.shuffle!
+    end
+%>
+
+<h1></h1>
+<h2 style="color:gray;"><%=
+  if table_type == "equally"
+    "強さを均等にして作成した"
+  end%>
+  <%=
+  if table_type == "level"
+    "レベル別にして作成した"
+  end%>
+  <%=
+  if table_type == "random"
+    "ランダムで作成した" 
+  end%>
+リーグ表</h2>
+<br>
+
+<div class="box fadeIn">
+<div>
+    <h3>Aリーグ</h3>
+</table>
+    <table class="table table-hover">
+    <tr>
+      <th></th>
+      <th><%=
+        strength_list[0][0] 
+      %></th>
+      <th><%=
+         if table_type == "equally"
+          strength_list[5][0]
+         else
+          strength_list[1][0] end
+      %></th>
+      <th><%=
+        if table_type == "equally"
+          strength_list[6][0]
+        else
+          strength_list[2][0] end 
+      %></th>      
+    </tr>
+    <tr>
+      <th>
+      <%= strength_list[0][0] %>
+      </th> 
+      <td></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+    </tr>
+    <tr>
+      <th><%=
+        if table_type == "equally"
+          strength_list[5][0]
+        else
+          strength_list[1][0] end 
+      %></th>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+    </tr>
+    <tr>
+      <th><%=
+        if table_type == "equally"
+          strength_list[6][0]
+        else
+          strength_list[2][0] end 
+      %></th>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td></td>
+    </tr>
+    </table>
+</div>
+<br>
+<br>
+
+<div>
+    <h3>Bリーグ</h3>
+    <table class="table table-hover">
+    <tr>
+      <th></th>
+      <th><%=
+        if table_type == "equally"
+          strength_list[1][0]
+        else
+          strength_list[3][0] 
+        end %>
+      </th>
+      <th><%=
+        if table_type == "equally"
+          strength_list[4][0]
+        else
+          strength_list[4][0] 
+        end 
+      %></th>
+      <th><%=
+        if table_type == "equally"
+          strength_list[7][0]
+        else
+          strength_list[5][0] 
+        end 
+      %></th>      
+    </tr>
+    <tr>
+      <th><%=
+        if table_type == "equally"
+          strength_list[1][0]
+        else
+          strength_list[3][0] 
+        end 
+      %></th>
+      <td></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+    </tr>
+    <tr>
+      <th><%=
+        strength_list[4][0] 
+      %></th>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+    </tr>
+    <tr>
+      <th><%=
+        if table_type == "equally"
+          strength_list[7][0]
+        else
+          strength_list[5][0] 
+        end 
+      %></th>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td></td>
+    </tr>
+    </table>
+</div>
+<br>
+<br>
+
+<div>
+    <h3>Cリーグ</h3>
+    <table class="table table-hover">
+    <tr>
+      <th></th>
+      <th><%=
+        if table_type == "equally"
+          strength_list[2][0]
+        else
+          strength_list[6][0] 
+        end 
+      %></th>
+      <th><%=
+        if table_type == "equally"
+          strength_list[3][0]
+        else
+          strength_list[7][0] 
+        end 
+      %></th>
+      <th><%=
+        strength_list[8][0] 
+      %></th>
+    </tr>
+    <tr>
+      <th><%=
+        if table_type == "equally"
+          strength_list[2][0]
+        else
+          strength_list[6][0] 
+        end 
+      %></th>
+      <td></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+    </tr>
+    <tr>
+      <th><%=
+        if table_type == "equally"
+          strength_list[3][0]
+        else
+          strength_list[7][0] 
+        end 
+      %></th>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+    </tr>
+    <tr>
+      <th><%=
+        strength_list[8][0] 
+      %></th>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td></td>
+    </tr>
+    </table>
+</div>
+</dl>
+<br>
+
+<span>
+  <form action="/input3_type" method="post">
+    <% names.each do |name|%>
+    <input type="hidden" name="name[]" value="<%= ERB::Util.html_escape(name) %>">
+    <% end %>  
+
+    <% strengths.each do |strength|%>
+    <input type="hidden" name="strength[]" value="<%= ERB::Util.html_escape(strength) %>">
+    <% end %> 
+
+    <input type="hidden" name="table_type" value="<%= table_type %>">
+    
+    <input type="submit" class="btn btn-outline-success" value="ステップ3に戻る" style="float: left;">
+  </form>
+</span>
+
+<a href="/" class="btn btn-success" style="float: right;">　トップページへ　</a>
+</div>

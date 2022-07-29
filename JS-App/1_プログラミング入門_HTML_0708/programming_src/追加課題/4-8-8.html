@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>追加課題8</title>
+</head>
+<body>
+  <p>西暦を入力してください。<input type="number" id="year"><button id="run">決定</button></p>
+  <p id="result"></p>
+  <script>
+  var result = document.querySelector("#result");
+
+  function leapYear() {
+    var year = document.querySelector("#year").value;
+    if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
+      result.innerHTML = "閏年です。";
+    } else {
+      result.innerHTML = "閏年ではありません。";
+    }
+  }
+
+  var run = document.querySelector("#run");
+  run.addEventListener('click', leapYear);
+  </script>
+</body>
+</html>

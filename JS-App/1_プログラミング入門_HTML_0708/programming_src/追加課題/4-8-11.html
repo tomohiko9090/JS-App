@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>追加課題11</title>
+</head>
+<body>
+  <p>ソート前： <span id="before"></span></p>
+  <p>ソート後： <span id="after"></span></p>
+
+  <script>
+   var list = [2, 5, 7, 3, 6, 1, 4];
+
+   function display() {
+     var text ='';
+     for(var i = 0; i < list.length; i++) {
+       console.log(list[i]);
+       text += list[i] + " ";
+     }
+     return text;
+    }
+    /***** 挿入ソート *****/
+    function sort() {
+      for (var i = 1; i < list.length; i++) {
+        var target = list[i];
+        for (var j = i - 1; j >= 0; j--) {
+          if (target < list[j]) {
+            list[j + 1] = list[j];
+          } else {
+          break;
+          }
+        }
+        list[j + 1] = target;
+      }
+    }
+    document.querySelector("#before").innerHTML = display();
+    sort();
+    document.querySelector("#after").innerHTML = display();
+  </script>
+</body>
+</html>

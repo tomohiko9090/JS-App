@@ -1,0 +1,24 @@
+h8{
+  opacity: 0.4;
+  text-align:right;
+}
+
+body{
+  margin:0px 25px;
+  padding:0px;
+  }
+
+  #layout{
+    margin-left:auto;
+    margin-right:auto;
+    width:780px;
+    }
+
+  .bg-img{
+    background-image: url("94_ゆるゆるくらげ.png");
+    background-size: 200px;
+    /* background-repeat: no-repeat; */
+    background-color:rgba(255,255,255,0.95);
+    background-blend-mode:lighten;
+    /* background-size: cover; */
+  }

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カラーチェンジ！</title>
+    <link rel="stylesheet" href="4_colorChange.css">
+</head>
+<body >
+    <div class="blue">blue</div>
+    <div class="green">green</div>
+    <div class="yellow">yellow</div>
+    <div class="orange">orange</div>
+    <div class="red">red</div>
+    <div class="brown">brown</div>
+    <script src="4_colorChange.js"></script>
+</body>
+</html>
+
+<!-- 原先生のレファクタ1 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>色</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        li {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin-bottom: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul id="color-select">
+
+    </ul>
+    <script>
+        let colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+        let container = document.querySelector("#color-select");
+        for (let i = 0; i < colors.length; i ++) {
+            let color = colors[i];
+            let li = document.createElement("li");
+            li.textContent = color;
+            li.style.backgroundColor = color;
+            li.addEventListener('click', function () {
+                document.querySelector('body').style.backgroundColor = color;
+            })
+            container.appendChild(li);
+        }        
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!-- 原先生のレファクタ2 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>色</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        li {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin-bottom: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul id="color-select">
+        <li>red</li>
+        <li>orange</li>
+        <li>yellow</li>
+        <li>green</li>
+        <li>blue</li>
+        <li>purple</li>
+    </ul>
+    <script>
+        let items = document.querySelectorAll("#color-select li");
+        for (let i = 0; i < items.length; i ++) {
+            let li = items[i];
+            let color = li.textContent;
+            li.style.backgroundColor = color;
+            li.addEventListener('click', function () {
+                document.querySelector('body').style.backgroundColor = color;
+            })
+        }
+    </script>
+</body>
+</html> -->

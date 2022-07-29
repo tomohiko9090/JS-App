@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+</head>
+<body>
+  <p id="str">マウスをもってきてね。</p>
+  <script>
+    function chgColor(color) {
+      str.style.backgroundColor = color;
+    }
+    var str = document.querySelector("#str");
+    str.addEventListener("mouseover", function() { chgColor("#ffc0cb") });
+    str.addEventListener("mouseout", function() { chgColor("#ffffff") });
+  </script>
+</body>
+</html>

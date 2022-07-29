@@ -1,0 +1,36 @@
+.buttons{
+  text-align: center;
+}
+.button{
+  display: inline-block;
+  background: green;
+  margin: 0 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* 装飾用 */
+
+body{
+  margin: 40px;
+  text-align: center;
+}
+
+.contentA{
+  background: #b3d874;
+}
+
+.contentB{
+  background: #6fb5ff;
+}
+
+.contentA,.contentB{
+  width: 50%;
+  height: 200px;
+ }
+  
+ .main{
+  display: flex;
+ }

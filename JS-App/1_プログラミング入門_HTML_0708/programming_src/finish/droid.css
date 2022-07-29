@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    background: url("bg.png") repeat;
+    font-size: 14px;
+    text-align: center;
+}
+h1 {
+    background: url("title_bg.gif") repeat;
+    font-size: 20px;
+    color: white;
+    padding: 20px;
+    margin:0;
+}
+h2 {
+    color: crimson;
+    margin: 30px;
+}
+h3 {
+    color: steelblue;
+    margin: 15px;
+}
+li {
+    margin: 12px;
+    cursor: pointer;
+}
+ul {
+    padding-left: 0;
+    list-style-position: inside;
+}

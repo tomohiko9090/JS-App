@@ -1,0 +1,25 @@
+<%
+  names = params[:name] #input2からデータ流し込み用
+%>
+
+<ol class="stepBar step3">
+  <li class="step current">STEP1</li>
+  <li class="step">STEP2</li>
+  <li class="step">STEP3</li>
+</ol>
+
+<div class="box fadeIn">
+<h3 style="color:gray;">プレイヤー名を入力してください。</h3>
+<br>
+<form action="/input2_strength" method="post">
+<dl>
+        <%(0..8).each do |i|%>
+        <dt>プレイヤー<%=i+1%></dt>
+        <dd><input type="text" name="name[]" value="<%= names[i] if names %>"></dd><br>
+        <% end %> 
+</dl>
+<a href="/" class="btn btn-outline-success">ホームに戻る</a>
+<button type="submit" class="btn btn-success" style="float: right;">　　次へ　　</button>
+</form>
+</div>
+</div>

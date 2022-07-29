@@ -1,0 +1,16 @@
+.title{
+  background-color: bisque; 
+  height:50px;
+  width: 1040px;
+}
+
+.photo_preview{
+  width: 1040px;
+  height: 700px; 
+  margin:auto;
+}
+
+.photo {
+  width: 200px;
+  height: 150px;
+  }
