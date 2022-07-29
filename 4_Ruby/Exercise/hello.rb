@@ -48,9 +48,9 @@ schools.each do |school|
     puts "#{school}におりました。" 
 end
 
-puts "\nテスト7"
-lang = %w(Ruby Python Perl Java)
+puts "\nテスト7" Java)
 puts "好きな言語は？"
+lang = %w(Ruby Python Perl)
 lang.each_with_index do |name, index| #二つ目にindexが入ってくる
     puts "#{index+1}位：#{name}"
 end
@@ -325,7 +325,6 @@ class Cat
         puts "しゃー！！！！"
         puts "みゃー！！！！"
     end
-
 end
 
 cat1 = Cat.new("タマ", "雑種")
@@ -776,9 +775,9 @@ puts $' #マッチした部分より後ろ
 
 puts "\nテスト55"
 # 文字列パターンの置換
-str = 'Perl PHP Python Perl PHP Python'
-puts str.sub(/Python/, 'おっぱっぴー') #最初にでてきたPythonのみ置換
+str = 'Perl PHP Python Perl PHP Python'puts str.sub(/Python/, 'おっぱっぴー') #最初にでてきたPythonのみ置換
 puts str.gsub(/Python/, 'おっぱっぴー') #Python全てを置換
+
 
 
 puts "\nテスト56"

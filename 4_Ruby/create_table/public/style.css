@@ -115,12 +115,16 @@ p {
   padding: 0;
 }
 
+
+
 input[type="range"] {
   width:300px;
   height: 10px;
-  background: aquamarine; /* バーの背景色 */
+  accent-color: rgb(38, 191, 100);
+
 }
 
-
-
-
+.form-check-input:checked {
+  background-color: rgb(38, 191, 161);
+  border-color: rgb(38, 191, 161);
+}

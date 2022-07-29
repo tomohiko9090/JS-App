@@ -1,0 +1,11 @@
+header{
+    margin-bottom: 20px;
+}
+
+td{
+    padding: 5px 10px;
+    border-top: 1px solid #ddd; 
+    border-left: 1px solid #ddd; 
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
