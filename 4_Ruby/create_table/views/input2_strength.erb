@@ -1,6 +1,7 @@
 <%      
     names = params[:name]  
     strengths = params[:strength] #input3からデータ流し込み用
+    p strengths
 %>
 <ol class="stepBar step3">
   <li class="step">STEP1</li>
@@ -15,33 +16,21 @@
     <% (0..8).each do |i|%>
     <dt><span><%= "プレイヤー#{i+1}  「#{names[i]}」" %></span></dt>
 
-<<<<<<< HEAD
-    <span>強さ: <input type="range" name="strength[]" min="1" max="9" step="1" value=<%=
-=======
     <span><input type="range" list="my-datalist" name="strength[]" min="1" max="9" step="1" value=<%=
->>>>>>> new
     if strengths
         strengths[i]
     else
         "5"
     end
     %> oninput="document.getElementById('output<%= i %>').value=this.value"></span>
-<<<<<<< HEAD
-=======
     
->>>>>>> new
     <output id="output<%= i %>"><%=
     if strengths
         strengths[i]
     else
         "5"
     end
-<<<<<<< HEAD
     %></output> 
-=======
-    %>
-    </output> 
->>>>>>> new
     <br><br>
     <% end %> 
     <br>

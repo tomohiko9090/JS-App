@@ -115,12 +115,6 @@ p {
   padding: 0;
 }
 
-<<<<<<< HEAD
-input[type=range] {
-  width:240px;
-=======
-
-
 input[type="range"] {
   width:300px;
   height: 10px;
@@ -131,5 +125,4 @@ input[type="range"] {
 .form-check-input:checked {
   background-color: rgb(38, 191, 161);
   border-color: rgb(38, 191, 161);
->>>>>>> new
 }

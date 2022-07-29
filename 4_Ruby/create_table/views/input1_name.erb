@@ -12,25 +12,14 @@
 <h3 style="color:gray;">プレイヤー名を入力してください。</h3>
 <br>
 <form action="/input2_strength" method="post">
-<<<<<<< HEAD
-    <dl>
-=======
 <dl>
->>>>>>> new
         <%(0..8).each do |i|%>
         <dt>プレイヤー<%=i+1%></dt>
         <dd><input type="text" name="name[]" value="<%= names[i] if names %>"></dd><br>
         <% end %> 
-<<<<<<< HEAD
-    </dl>
-    <a href="/" class="btn btn-outline-success">ホームに戻る</a>
-    <button type="submit" class="btn btn-success" style="float: right;">　　次へ　　</button>
-</form>
-=======
 </dl>
 <a href="/" class="btn btn-outline-success">ホームに戻る</a>
 <button type="submit" class="btn btn-success" style="float: right;">　　次へ　　</button>
 </form>
 </div>
 </div>
->>>>>>> new
