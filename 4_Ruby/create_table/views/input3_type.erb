@@ -2,6 +2,13 @@
     names = params[:name] 
     strengths = params[:strength]
     table_type = params[:table_type] #tableからデータ流し込み用
+<<<<<<< HEAD
+=======
+    p table_type
+    unless table_type
+      table_type = "equally"
+    end
+>>>>>>> new
 %>
 <ol class="stepBar step3">
   <li class="step">STEP1</li>
@@ -9,7 +16,8 @@
   <li class="step current">STEP3</li>
 </ol>
 
-<h3>表の作り方を選んで下さい。</h3>
+<div class="box fadeIn">
+<h3 style="color:gray;">表の作り方を選んで下さい。</h3>
 <br>
 <form action="/table" method="post">
     <div class="form-check">
@@ -60,3 +68,4 @@
     <input type="submit" class="btn btn-outline-success" value="ステップ2に戻る" style="float: left;">
   </form>
 </span>
+</div>
