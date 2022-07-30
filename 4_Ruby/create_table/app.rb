@@ -4,20 +4,24 @@ get '/' do
     erb :index
 end
 
-get '/input1_name' do 
-    erb :input1_name
+get '/input1_setting' do 
+    erb :input1_setting
 end
 
-post '/input1_name' do 
-    erb :input1_name
+post '/input1_setting' do 
+    erb :input1_setting
 end
 
-post '/input2_strength' do 
-    erb :input2_strength
+post '/input2_name' do 
+    erb :input2_name
 end
 
-post '/input3_type' do 
-    erb :input3_type
+post '/input3_strength' do 
+    erb :input3_strength
+end
+
+post '/input4_type' do 
+    erb :input4_type
 end
 
 post '/table' do 

@@ -11,15 +11,24 @@
       strength_list = pair.shuffle!
     end
 %>
-<ol class="stepBar step3">
-  <li class="step">STEP1</li>
-  <li class="step">STEP2</li>
-  <li class="step">STEP3</li>
-</ol>
 
 <h1></h1>
-<h2><b>完成したリーグ表はこちら</b></h2>
+<h2 style="color:gray;"><%=
+  if table_type == "equally"
+    "強さを均等にして作成した"
+  end%>
+  <%=
+  if table_type == "level"
+    "レベル別にして作成した"
+  end%>
+  <%=
+  if table_type == "random"
+    "ランダムで作成した" 
+  end%>
+リーグ表</h2>
 <br>
+
+<div class="box fadeIn">
 <div>
     <h3>Aリーグ</h3>
 </table>
@@ -47,8 +56,8 @@
       <%= strength_list[0][0] %>
       </th> 
       <td></td>
-      <td></td>
-      <td></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td><input type="text" placeholder="点数を入力"></td>
     </tr>
     <tr>
       <th><%=
@@ -57,9 +66,9 @@
         else
           strength_list[1][0] end 
       %></th>
+      <td><input type="text" placeholder="点数を入力"></td>
       <td></td>
-      <td></td>
-      <td></td>
+      <td><input type="text" placeholder="点数を入力"></td>
     </tr>
     <tr>
       <th><%=
@@ -68,8 +77,8 @@
         else
           strength_list[2][0] end 
       %></th>
-      <td></td>
-      <td></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td><input type="text" placeholder="点数を入力"></td>
       <td></td>
     </tr>
     </table>
@@ -113,16 +122,16 @@
         end 
       %></th>
       <td></td>
-      <td></td>
-      <td></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td><input type="text" placeholder="点数を入力"></td>
     </tr>
     <tr>
       <th><%=
         strength_list[4][0] 
       %></th>
+      <td><input type="text" placeholder="点数を入力"></td>
       <td></td>
-      <td></td>
-      <td></td>
+      <td><input type="text" placeholder="点数を入力"></td>
     </tr>
     <tr>
       <th><%=
@@ -132,8 +141,8 @@
           strength_list[5][0] 
         end 
       %></th>
-      <td></td>
-      <td></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td><input type="text" placeholder="点数を入力"></td>
       <td></td>
     </tr>
     </table>
@@ -173,8 +182,8 @@
         end 
       %></th>
       <td></td>
-      <td></td>
-      <td></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td><input type="text" placeholder="点数を入力"></td>
     </tr>
     <tr>
       <th><%=
@@ -184,16 +193,16 @@
           strength_list[7][0] 
         end 
       %></th>
+      <td><input type="text" placeholder="点数を入力"></td>
       <td></td>
-      <td></td>
-      <td></td>
+      <td><input type="text" placeholder="点数を入力"></td>
     </tr>
     <tr>
       <th><%=
         strength_list[8][0] 
       %></th>
-      <td></td>
-      <td></td>
+      <td><input type="text" placeholder="点数を入力"></td>
+      <td><input type="text" placeholder="点数を入力"></td>
       <td></td>
     </tr>
     </table>
@@ -217,4 +226,5 @@
   </form>
 </span>
 
-<a href="/" class="btn btn-info" style="float: right;">　トップページへ　</a>
+<a href="/" class="btn btn-success" style="float: right;">　トップページへ　</a>
+</div>

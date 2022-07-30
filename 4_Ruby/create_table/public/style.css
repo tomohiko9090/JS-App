@@ -114,6 +114,15 @@ p {
   padding: 0;
 }
 
-input[type=range] {
-  width:240px;
+input[type="range"] {
+  width:300px;
+  height: 10px;
+  accent-color: rgb(38, 191, 100);
+
 }
+
+.form-check-input:checked {
+  background-color: rgb(38, 191, 161);
+  border-color: rgb(38, 191, 161);
+}
+
