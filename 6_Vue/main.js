@@ -13,7 +13,18 @@ const app = Vue.createApp({
                 {name: "パイナップル", price: 380, stock: 6},
             ],
 
-            numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+
+            activeTab: 'tabs-1',
+            tabs: [
+                {name:'tabs-1', text: 'タブ1'},
+                {name:'tabs-2', text: 'タブ2'},
+                {name:'tabs-3', text: 'タブ3'},
+            ],
+            
+            hands: ["グー", "チョキ", "パー"],
+            you: null,
+            com: null,
         }
     },
     computed: {
@@ -26,6 +37,12 @@ const app = Vue.createApp({
         square(){
             return this.radius ** 2 * 3.14
         },
+    },
+    methods:{
+        doJanken(key){
+            this.you = key
+            this.com = parseInt(Math.random() *  3) //0~2の乱数
+        }
     }
 })
 const vm = app.mount("#app")

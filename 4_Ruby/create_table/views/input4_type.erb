@@ -6,10 +6,11 @@
       table_type = "equally"
     end
 %>
-<ol class="stepBar step3">
-  <li class="step">STEP1</li>
-  <li class="step">STEP2</li>
-  <li class="step current">STEP3</li>
+<ol class="stepBar step4">
+    <li class="step">STEP1</li>
+    <li class="step">STEP2</li>
+    <li class="step">STEP3</li>
+    <li class="step current">STEP4</li>
 </ol>
 
 <div class="box fadeIn">
@@ -52,7 +53,7 @@
 </form>
 
 <span>
-  <form action="/input2_strength" method="post">
+  <form action="/input3_strength" method="post">
     <% names.each do |name|%>
     <input type="hidden" name="name[]" value="<%= ERB::Util.html_escape(name) %>">
     <% end %>  
@@ -61,7 +62,7 @@
     <input type="hidden" name="strength[]" value="<%= ERB::Util.html_escape(strength) %>">
     <% end %> 
     
-    <input type="submit" class="btn btn-outline-success" value="ステップ2に戻る" style="float: left;">
+    <input type="submit" class="btn btn-outline-success" value="ステップ3に戻る" style="float: left;">
   </form>
 </span>
 </div>
