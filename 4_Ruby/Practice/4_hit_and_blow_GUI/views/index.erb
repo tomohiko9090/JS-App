@@ -1,16 +1,88 @@
+<%
+# 3桁作成メソッド
+def generateNumber
+    loop do
+        p @result_hundreds_place = rand(9) 
+        p @result_tens_place = rand(9) 
+        p @result_ones_place = rand(9) 
+        if @result_ones_place != @result_tens_place && @result_ones_place != @result_hundreds_place && @result_tens_place != @result_hundreds_place
+            break
+        end
+    end
+    return @result_hundreds_place, @result_tens_place, @result_ones_place
+end
+%>
 
+<%
+$number_of_answers = 0 #何回答えたか
+$collect = 0 #当たったかどうかのフラグ
+%>
+<%#// result_hundreds_place, result_tens_place, result_ones_place = generateNumber%>
+<div>
+    <table class="table-bordered tab">
+    <tr>
+      <th>回数</th>
+      <th>あなたの推理</th>
+      <th>ヒット</th>
+      <th>バイト</th>  
+    </tr>
 
+<%
+# 数字判定メソッド
+def judge(result_hundreds_place, result_tens_place, result_ones_place)
 
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ヒットアンドブローゲーム</title>
-</head>
-<body>
-    <input type="text">
+    $number_of_answers += 1
+
+    result_number_list = [result_hundreds_place, result_tens_place, result_ones_place]
+
+    pridect_number_list = gets.chomp.split("").map { |i| i.to_i }
+    pridect_hundreds_place = pridect_number_list[0]
+    pridect_tens_place = pridect_number_list[1]
+    pridect_ones_place = pridect_number_list[2]
+
+    hit_cnt = 0
+    if result_hundreds_place == pridect_hundreds_place
+        hit_cnt += 1
+    end
+    if result_tens_place == pridect_tens_place
+        hit_cnt += 1
+    end
+    if result_ones_place == pridect_ones_place
+        hit_cnt += 1
+    end
+
+    blow_cnt = 0
+    if result_number_list.include?(pridect_hundreds_place)
+        blow_cnt += 1
+    end
+    if result_number_list.include?(pridect_tens_place)
+        blow_cnt += 1
+    end
+    if result_number_list.include?(pridect_ones_place)
+        blow_cnt += 1
+    end
     
-</body>
-</html>
+    puts "#{hit_cnt}ヒット #{blow_cnt}ブロー"
+
+    if result_number_list == pridect_number_list
+        $collect += 1
+        puts "#{$number_of_answers}回で当たりました"
+    end
+end
+%>
+    <div v-if="you != null">
+    <tr>
+      <td>a</td>
+      <td>a</td>
+      <td>a</td>
+      <td>a</td>
+    </tr>
+
+    </table>
+</div>
+<br>
+<form action="/" method="post">
+    <input type="number" name="predict[]" min="1" max="999" class="form-control input-number border-dark" style="width:100px; float: left;">　
+    <button type="submit" class="btn btn-success">判定</button>
+</form>
+<p style="color:grey">3桁の数字を入力してください。</p>
