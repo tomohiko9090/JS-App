@@ -1,4 +1,6 @@
 <%  
+    number_of_people = params[:number_of_people].to_i
+    number_of_group = params[:number_of_group].to_i
     names = params[:name] 
     strengths = params[:strength]
     table_type = params[:table_type] #tableからデータ流し込み用
@@ -13,7 +15,7 @@
     <li class="step current">STEP4</li>
 </ol>
 
-<div class="box fadeIn">
+<div class="box fadeLeft">
 <h3 style="color:gray;">表の作り方を選んで下さい。</h3>
 <br>
 <form action="/table" method="post">
@@ -48,12 +50,17 @@
     <input type="hidden" name="strength[]" value="<%= ERB::Util.html_escape(strength) %>">
     <% end %>  
     <span>
+      <input type="hidden" name="number_of_people" value="<%= number_of_people %>">
+      <input type="hidden" name="number_of_group" value="<%= number_of_group %>">
       <button type="submit" class="btn btn-success" style="float: right;">　　表を作る　　</button>
     </span>
 </form>
 
 <span>
   <form action="/input3_strength" method="post">
+    <input type="hidden" name="number_of_people" value="<%= number_of_people %>">
+    <input type="hidden" name="number_of_group" value="<%= number_of_group %>">
+
     <% names.each do |name|%>
     <input type="hidden" name="name[]" value="<%= ERB::Util.html_escape(name) %>">
     <% end %>  
@@ -61,7 +68,7 @@
     <% strengths.each do |strength|%>
     <input type="hidden" name="strength[]" value="<%= ERB::Util.html_escape(strength) %>">
     <% end %> 
-    
+
     <input type="submit" class="btn btn-outline-success" value="ステップ3に戻る" style="float: left;">
   </form>
 </span>

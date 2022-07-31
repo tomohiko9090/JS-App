@@ -1,7 +1,7 @@
 <%  
     number_of_people = params[:number_of_people].to_i
     number_of_group = params[:number_of_group].to_i
-    names = params[:name]  
+    names = params[:name] 
     strengths = params[:strength] #input3からデータ流し込み用
 %>
 <ol class="stepBar step4">
@@ -11,7 +11,7 @@
     <li class="step">STEP4</li>
 </ol>
 
-<div class="box fadeIn">
+<div class="box fadeLeft">
 <h3 style="color:gray;">プレイヤーの強さを9段階で評価してください。</h3>
 <br>
 <form action="/input4_type" method="post">
@@ -41,7 +41,8 @@
     <% names.each do |name|%>
     <input type="hidden" name="name[]" value="<%= ERB::Util.html_escape(name) %>">
     <% end %>  
-
+    <input type="hidden" name="number_of_people" value="<%= number_of_people %>">
+    <input type="hidden" name="number_of_group" value="<%= number_of_group %>">
     <button type="submit" class="btn btn-success" style="float: right;">　　次へ　　</button>
 </form>
 
