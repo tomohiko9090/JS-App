@@ -21,18 +21,16 @@
 
     box = []
     if table_type == "equally"
-      # 強さ順に並べ替え
+      # 1. 強さ順に並べ替え
       strength_list = pair.sort_by {|x| x[1]}.reverse!
       before_list = strength_list.transpose[0]
-      p before_list
 
-      # 箱を作る
+      # 2. 箱を作る
       number_of_group.times do  
         box.push([])
       end
-      p box
 
-      # 1. 名前と弱い順に並べた時の順位を入れたハッシュin配列を作成
+      # 3. 名前と弱い順に並べた時の順位を入れたハッシュin配列を作成
       ranking_dict_in_list = []
       p before_list.reverse
       before_list.reverse.each_with_index do |value, index|
@@ -40,7 +38,7 @@
       end
       p ranking_dict_in_list
 
-      # 2. 箱に挿入していく。その時、①各箱の和が小さいものに挿入、②和が同じときはindex番号が小さいものを優先にして、箱に入れる
+      # 4. 箱に挿入していく。その時、①各箱の和が小さいものに挿入、②和が同じときはindex番号が小さいものを優先にして、箱に入れる
       ranking_dict_in_list.each do |value|
         box_2 = []
         box.each_with_index do |list, index|# 箱の和が一番小さいもののindexを取ってくる
@@ -50,20 +48,10 @@
         box[box_sum_min_index].push(value)
       end
 
-      # 3. 全ての要素が入れ終わったら、1次元リストにし、同時にハッシュから要素を取り出す作業にする
+      # 5. 全ての要素が入れ終わったら、1次元リストにし、同時にハッシュから要素を取り出す作業にする
       p after_list = box.flatten.reverse!
       names1 = after_list.map{|hash| hash[:name]}
       names2 = after_list.map{|hash| hash[:name]}
-
-      # before_list.slice!(0...number_of_group).each_with_index do |value, index|
-      #     box[index].push(value)
-      # end
-      # p box, before_list
-      # before_list[number_of_group...number_of_group*2].each_with_index do |value, index|
-      #     box[index].push(value)
-      # end
-
-      # 1次元リストにする
     end   
 
 
