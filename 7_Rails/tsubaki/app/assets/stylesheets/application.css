@@ -1,0 +1,13 @@
+table{
+    background-color: #aaa;
+    padding: 10px;
+}
+th{
+    background-color: #444;
+    color:#fff;
+    padding:4px;
+}
+td{
+    background-color: #fff;
+    padding: 4px;
+}

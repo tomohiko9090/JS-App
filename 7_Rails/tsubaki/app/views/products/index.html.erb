@@ -1,0 +1,12 @@
+<h1>製品一覧</h1>
+<table>
+    <tr>
+        <th>名称</th>
+    </tr>
+    <% @products.each do |p| %>
+    <tr>
+        <td><%= p.name %></td>
+        <td><%= link_to "詳細", {id: p.id, action: :show} %></td>
+    </tr>
+    <% end %>
+</table>

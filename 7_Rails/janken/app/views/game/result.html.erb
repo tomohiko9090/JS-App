@@ -1,0 +1,15 @@
+<%  
+    @document_title = "ゲーム結果" 
+    hands = %w(グー チョキ パー)
+%>
+
+<p>あなたの手は・・・<%= hands[@player_hand] %></p>
+<p>コンピュータの手は・・・<%= hands[@computer_hand] %></p>
+<p><%= @result %></p>
+<hr>
+<p>
+    <%= link_to "トップページへ", root_path %>
+    <%= link_to "もう一度", action: :start %>
+    <%= root_path %>
+    <%= game_start_path(1).is_a? %>
+</p>

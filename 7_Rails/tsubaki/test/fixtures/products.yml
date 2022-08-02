@@ -1,0 +1,26 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+t_shirt01:
+  id: 1
+  name: TシャツNo:1
+  price: 1980
+
+t_shirt02:
+  id: 2
+  name: TシャツNo:2
+  price: 2480
+
+t_shirt03:
+  id: 3
+  name: TシャツNo:3
+  price: 2980
+
+sox_black:
+  id: 4
+  name: ソックス（黒）
+  price: 500
+
+sox_white:
+  id: 5
+  name: ソックス（白）
+  price: 500

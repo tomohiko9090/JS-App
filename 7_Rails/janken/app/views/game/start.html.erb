@@ -1,0 +1,11 @@
+<% 
+    @document_title = "ゲーム開始"
+    hands = %w(グー チョキ パー)
+%>
+
+<p>あなたの手を選んでください。</p>
+<div>
+    <% hands.each_with_index do |value, key| %>
+        <%= link_to value, hand: key, action: :result %>
+    <% end %>
+</div>

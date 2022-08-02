@@ -1,0 +1,11 @@
+<h1>製品の詳細情報</h1>
+<table>
+    <tr>
+        <th>名称</th>
+        <td><%= @product.name %></td>
+    </tr>
+    <tr>
+        <th>価格</th>
+        <td>&yen;<%= number_with_delimiter(@product.price)%></td>
+    </tr>
+</table>
