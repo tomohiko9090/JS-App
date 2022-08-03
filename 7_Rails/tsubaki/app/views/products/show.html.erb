@@ -11,5 +11,5 @@
 </table>
 <%= link_to "編集", edit_product_path %>
 <%= link_to "この製品の削除", product_path(@product),
-method: :delete%>
+method: :delete, data:{confirm: "本当に削除しますか"} %> 
 <%= link_to "葛葉の部屋に戻る", products_path %>

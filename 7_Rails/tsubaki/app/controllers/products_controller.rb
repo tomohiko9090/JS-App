@@ -46,5 +46,5 @@ end
 
 private
   def post_params
-    params.require(:product).permit(:name, :price)
+    params.require(:product).permit(:name, :price) #保存はしないよ
   end
