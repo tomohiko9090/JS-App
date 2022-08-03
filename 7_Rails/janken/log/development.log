@@ -1,0 +1,1269 @@
+  [1m[35m (318.7ms)[0m  [1m[35mCREATE DATABASE "janken_development" ENCODING = 'unicode'[0m
+  [1m[35m (287.4ms)[0m  [1m[35mCREATE DATABASE "janken_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2022-08-01 15:56:16 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/tomohiko-kuzuba/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-6.1.6.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/tomohiko-kuzuba/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-6.1.6.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.7ms | Allocations: 449)
+Completed 200 OK in 30ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 3673)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 15:56:31 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 1.2ms | Allocations: 107)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/tomohiko-kuzuba/Documents/JS-App/7_Rails/janken/public/packs
+[Webpacker] Hash: 0fe7dcd9d8f9ebcf52de
+Version: webpack 4.46.0
+Time: 1477ms
+Built at: 2022/08/01 15:56:35
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-2e212f7c8f867558ac6e.js    121 KiB  application  [emitted] [immutable]  application
+js/application-2e212f7c8f867558ac6e.js.map    136 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-2e212f7c8f867558ac6e.js js/application-2e212f7c8f867558ac6e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 3517.4ms | Allocations: 21050)
+Completed 200 OK in 3530ms (Views: 3521.3ms | ActiveRecord: 0.0ms | Allocations: 22273)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:05:45 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.5ms | Allocations: 108)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 9041)
+Completed 200 OK in 31ms (Views: 29.8ms | Allocations: 10137)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:08:29 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.5ms | Allocations: 105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 3929)
+Completed 200 OK in 22ms (Views: 20.8ms | Allocations: 5008)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:08:38 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.6ms | Allocations: 105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3936)
+Completed 200 OK in 11ms (Views: 10.0ms | Allocations: 5022)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:08:40 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.1ms | Allocations: 38)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3679)
+Completed 200 OK in 7ms (Views: 6.7ms | Allocations: 4055)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:20:28 +0900
+  
+SyntaxError (/Users/tomohiko-kuzuba/Documents/JS-App/7_Rails/janken/app/controllers/game_controller.rb:18: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/game_controller.rb:18: syntax error, unexpected `end', expecting end-of-input
+app/controllers/game_controller.rb:18: syntax error, unexpected `end', expecting end-of-input
+app/controllers/game_controller.rb:18: syntax error, unexpected `end', expecting end-of-input
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:22:52 +0900
+  
+SyntaxError (/Users/tomohiko-kuzuba/Documents/JS-App/7_Rails/janken/app/controllers/game_controller.rb:12: syntax error, unexpected string literal, expecting `end'
+          @result "あなたの勝ちです"
+                  ^
+/Users/tomohiko-kuzuba/Documents/JS-App/7_Rails/janken/app/controllers/game_controller.rb:13: else without rescue is useless
+        else
+        ^~~~
+/Users/tomohiko-kuzuba/Documents/JS-App/7_Rails/janken/app/controllers/game_controller.rb:17: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/game_controller.rb:12: syntax error, unexpected string literal, expecting `end'
+app/controllers/game_controller.rb:13: else without rescue is useless
+app/controllers/game_controller.rb:17: syntax error, unexpected `end', expecting end-of-input
+app/controllers/game_controller.rb:12: syntax error, unexpected string literal, expecting `end'
+app/controllers/game_controller.rb:13: else without rescue is useless
+app/controllers/game_controller.rb:17: syntax error, unexpected `end', expecting end-of-input
+app/controllers/game_controller.rb:12: syntax error, unexpected string literal, expecting `end'
+app/controllers/game_controller.rb:13: else without rescue is useless
+app/controllers/game_controller.rb:17: syntax error, unexpected `end', expecting end-of-input
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:23:05 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 1.3ms | Allocations: 819)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 4825)
+Completed 200 OK in 14ms (Views: 12.6ms | Allocations: 5987)
+
+
+Started GET "/game/result?hand=0" for 127.0.0.1 at 2022-08-01 16:23:11 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"0"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 7.6ms | Allocations: 4214)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4278)
+Completed 500 Internal Server Error in 9ms (Allocations: 4773)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<ActionView::Base:0x0000000000aeb0>
+Did you mean?  font_path):
+     9: <p><% @result %></p>
+    10: <hr>
+    11: <p>
+    12:     <% link_to "トップページへ", root_path %>
+    13:     <% link_to "もう一度", action: start %>
+    14: </p>
+  
+app/views/game/result.html.erb:12
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:23:12 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.7ms | Allocations: 310)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4675)
+Completed 200 OK in 14ms (Views: 13.3ms | Allocations: 5051)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:23:17 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/tomohiko-kuzuba/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-6.1.6.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/tomohiko-kuzuba/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-6.1.6.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.2ms | Allocations: 221)
+Completed 200 OK in 11ms (Views: 9.0ms | Allocations: 872)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:23:28 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/tomohiko-kuzuba/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-6.1.6.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/tomohiko-kuzuba/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-6.1.6.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 48)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 392)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:23:31 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.7ms | Allocations: 637)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4244)
+Completed 200 OK in 10ms (Views: 9.4ms | Allocations: 4738)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:23:34 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4050)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4114)
+Completed 500 Internal Server Error in 8ms (Allocations: 4475)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<ActionView::Base:0x0000000000bf18>
+Did you mean?  font_path):
+     9: <p><% @result %></p>
+    10: <hr>
+    11: <p>
+    12:     <% link_to "トップページへ", root_path %>
+    13:     <% link_to "もう一度", action: start %>
+    14: </p>
+  
+app/views/game/result.html.erb:12
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:23:42 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.6ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4030)
+Completed 200 OK in 10ms (Views: 9.8ms | Allocations: 4416)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:24:06 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.5ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3937)
+Completed 200 OK in 9ms (Views: 8.2ms | Allocations: 4311)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:24:08 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 6.9ms | Allocations: 4050)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4114)
+Completed 500 Internal Server Error in 8ms (Allocations: 4475)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<ActionView::Base:0x0000000000c288>
+Did you mean?  font_path):
+     9: <p><% @result %></p>
+    10: <hr>
+    11: <p>
+    12:     <% link_to "トップページへ", root_path %>
+    13:     <% link_to "もう一度", action: start %>
+    14: </p>
+  
+app/views/game/result.html.erb:12
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:25:41 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 7.2ms | Allocations: 4050)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4114)
+Completed 500 Internal Server Error in 8ms (Allocations: 4475)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<ActionView::Base:0x0000000000c558>
+Did you mean?  font_path):
+     9: <p><% @result %></p>
+    10: <hr>
+    11: <p>
+    12:     <% link_to "トップページへ", root_path %>
+    13:     <% link_to "もう一度", action: start %>
+    14: </p>
+  
+app/views/game/result.html.erb:12
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:25:44 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/tomohiko-kuzuba/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-6.1.6.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/tomohiko-kuzuba/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-6.1.6.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 48)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 391)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:25:47 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.4ms | Allocations: 303)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3950)
+Completed 200 OK in 8ms (Views: 7.8ms | Allocations: 4324)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:25:49 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 9.5ms | Allocations: 4050)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 4114)
+Completed 500 Internal Server Error in 11ms (Allocations: 4475)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<ActionView::Base:0x0000000000c968>
+Did you mean?  font_path):
+     9: <p><% @result %></p>
+    10: <hr>
+    11: <p>
+    12:     <% link_to "トップページへ", root_path %>
+    13:     <% link_to "もう一度", action: start %>
+    14: </p>
+  
+app/views/game/result.html.erb:12
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:28:54 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 4.9ms | Allocations: 4051)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 4115)
+Completed 500 Internal Server Error in 6ms (Allocations: 4596)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `start' for #<ActionView::Base:0x0000000000d930>):
+    10: <hr>
+    11: <p>
+    12:     <% link_to "トップページへ", root_path %>
+    13:     <% link_to "もう一度", action: start %>
+    14: </p>
+  
+app/views/game/result.html.erb:13
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:29:22 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 4226)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 4290)
+Completed 500 Internal Server Error in 8ms (Allocations: 5133)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `game' for #<ActionView::Base:0x0000000000dc78>):
+    1: <h1>Top#index</h1>
+    2: <% @document_title="じゃんけんゲーム" %>
+    3: <p><% link_to "ゲーム開始", controller: game, action: :start %></p>
+  
+app/views/top/index.html.erb:3
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:29:23 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 1.1ms | Allocations: 640)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4290)
+Completed 200 OK in 9ms (Views: 8.3ms | Allocations: 4665)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:29:25 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 4.2ms | Allocations: 4088)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 4162)
+Completed 500 Internal Server Error in 5ms (Allocations: 4524)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `start' for #<ActionView::Base:0x0000000000e038>):
+    10: <hr>
+    11: <p>
+    12:     <% link_to "トップページへ", root_path %>
+    13:     <% link_to "もう一度", action: start %>
+    14: </p>
+  
+app/views/game/result.html.erb:13
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:31:13 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.8ms | Allocations: 311)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 4146)
+Completed 200 OK in 11ms (Views: 10.2ms | Allocations: 5245)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:31:18 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 1.0ms | Allocations: 461)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4819)
+Completed 200 OK in 12ms (Views: 10.8ms | Allocations: 5322)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:31:21 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.3ms | Allocations: 150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3785)
+Completed 200 OK in 10ms (Views: 9.0ms | Allocations: 4178)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:32:36 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.8ms | Allocations: 303)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4138)
+Completed 200 OK in 12ms (Views: 10.7ms | Allocations: 5238)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:34:19 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.8ms | Allocations: 316)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4139)
+Completed 200 OK in 11ms (Views: 9.8ms | Allocations: 5234)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:34:51 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.3ms | Allocations: 156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3791)
+Completed 200 OK in 9ms (Views: 8.4ms | Allocations: 4181)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:34:56 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.8ms | Allocations: 461)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4816)
+Completed 200 OK in 9ms (Views: 8.1ms | Allocations: 5318)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:34:59 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.4ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3949)
+Completed 200 OK in 9ms (Views: 8.2ms | Allocations: 4324)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:35:00 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.7ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3937)
+Completed 200 OK in 9ms (Views: 8.4ms | Allocations: 4311)
+
+
+Started GET "/game/result?hand=2" for 127.0.0.1 at 2022-08-01 16:35:02 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.3ms | Allocations: 149)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3784)
+Completed 200 OK in 10ms (Views: 9.1ms | Allocations: 4176)
+
+
+Started GET "/game/result?hand=2" for 127.0.0.1 at 2022-08-01 16:38:04 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.9ms | Allocations: 325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4160)
+Completed 200 OK in 11ms (Views: 10.4ms | Allocations: 5260)
+
+
+Started GET "/game/result?hand=2" for 127.0.0.1 at 2022-08-01 16:38:44 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 1.0ms | Allocations: 321)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4144)
+Completed 200 OK in 16ms (Views: 14.6ms | Allocations: 5239)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:38:54 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 1.3ms | Allocations: 452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 4826)
+Completed 200 OK in 13ms (Views: 12.1ms | Allocations: 5329)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:38:55 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.3ms | Allocations: 153)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3788)
+Completed 200 OK in 9ms (Views: 8.9ms | Allocations: 4181)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:39:33 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.9ms | Allocations: 328)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4163)
+Completed 200 OK in 12ms (Views: 10.4ms | Allocations: 5257)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:40:07 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 4216)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 4280)
+Completed 500 Internal Server Error in 7ms (Allocations: 5120)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `game' for #<ActionView::Base:0x0000000000ec18>):
+    1: <h1>Top#index</h1>
+    2: <% @document_title="じゃんけんゲーム" %>
+    3: <p><% link_to "ゲーム開始", controller: game, action: :start %></p>
+  
+app/views/top/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:40:12 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 4113)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4177)
+Completed 500 Internal Server Error in 6ms (Allocations: 4524)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `game' for #<ActionView::Base:0x0000000000f028>):
+    1: <h1>Top#index</h1>
+    2: <% @document_title="じゃんけんゲーム" %>
+    3: <p><% link_to "ゲーム開始", controller: game, action: :start %></p>
+  
+app/views/top/index.html.erb:3
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:40:16 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.4ms | Allocations: 161)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3811)
+Completed 200 OK in 8ms (Views: 7.3ms | Allocations: 4201)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:40:22 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 4113)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4177)
+Completed 500 Internal Server Error in 8ms (Allocations: 4523)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `game' for #<ActionView::Base:0x0000000000f3e8>):
+    1: <h1>Top#index</h1>
+    2: <% @document_title="じゃんけんゲーム" %>
+    3: <p><% link_to "ゲーム開始", controller: game, action: :start %></p>
+  
+app/views/top/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:40:48 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 4113)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 4177)
+Completed 500 Internal Server Error in 5ms (Allocations: 4523)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `game' for #<ActionView::Base:0x0000000000f6b8>):
+    1: <h1>Top#index</h1>
+    2: <% @document_title="じゃんけんゲーム" %>
+    3: <p><% link_to "ゲーム開始", controller: game, action: :start %></p>
+  
+app/views/top/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:40:55 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 4113)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 4177)
+Completed 500 Internal Server Error in 7ms (Allocations: 4523)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `game' for #<ActionView::Base:0x0000000000f9b0>):
+    1: <h1>Top#index</h1>
+    2: <% @document_title="じゃんけんゲーム" %>
+    3: <p><% link_to "ゲーム開始", controller: game, action: :start %></p>
+  
+app/views/top/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:40:56 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 4113)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 4177)
+Completed 500 Internal Server Error in 5ms (Allocations: 4523)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `game' for #<ActionView::Base:0x0000000000fd98>):
+    1: <h1>Top#index</h1>
+    2: <% @document_title="じゃんけんゲーム" %>
+    3: <p><% link_to "ゲーム開始", controller: game, action: :start %></p>
+  
+app/views/top/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:41:00 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 4113)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 4177)
+Completed 500 Internal Server Error in 5ms (Allocations: 4523)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `game' for #<ActionView::Base:0x00000000010068>):
+    1: <h1>Top#index</h1>
+    2: <% @document_title="じゃんけんゲーム" %>
+    3: <p><% link_to "ゲーム開始", controller: game, action: :start %></p>
+  
+app/views/top/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:41:11 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 4113)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 4177)
+Completed 500 Internal Server Error in 6ms (Allocations: 4523)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `game' for #<ActionView::Base:0x00000000010338>):
+    1: <h1>Top#index</h1>
+    2: <% @document_title="じゃんけんゲーム" %>
+    3: <p><% link_to "ゲーム開始", controller: game, action: :start %></p>
+  
+app/views/top/index.html.erb:3
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:41:16 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.3ms | Allocations: 152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 8914)
+Completed 200 OK in 28ms (Views: 28.0ms | Allocations: 9303)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:42:03 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.9ms | Allocations: 330)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4165)
+Completed 200 OK in 12ms (Views: 11.0ms | Allocations: 5265)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:42:14 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.8ms | Allocations: 326)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4149)
+Completed 200 OK in 12ms (Views: 10.3ms | Allocations: 5243)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:42:17 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.3ms | Allocations: 161)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3796)
+Completed 200 OK in 8ms (Views: 7.7ms | Allocations: 4186)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:42:19 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.3ms | Allocations: 152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3787)
+Completed 200 OK in 8ms (Views: 7.8ms | Allocations: 4177)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:42:19 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.2ms | Allocations: 152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3794)
+Completed 200 OK in 7ms (Views: 6.8ms | Allocations: 4183)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:42:20 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.3ms | Allocations: 152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3792)
+Completed 200 OK in 8ms (Views: 8.0ms | Allocations: 4181)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:42:30 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.9ms | Allocations: 332)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4167)
+Completed 200 OK in 11ms (Views: 10.3ms | Allocations: 5267)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:42:43 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 1.0ms | Allocations: 452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4275)
+Completed 200 OK in 12ms (Views: 10.5ms | Allocations: 5358)
+
+
+Started GET "/game/result?hand=2" for 127.0.0.1 at 2022-08-01 16:42:44 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 1.0ms | Allocations: 325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4602)
+Completed 200 OK in 11ms (Views: 10.0ms | Allocations: 5124)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:42:47 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.6ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3943)
+Completed 200 OK in 9ms (Views: 8.8ms | Allocations: 4321)
+
+
+Started GET "/game/result?hand=0" for 127.0.0.1 at 2022-08-01 16:42:48 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"0"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.3ms | Allocations: 152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3787)
+Completed 200 OK in 9ms (Views: 8.3ms | Allocations: 4179)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:42:49 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 4218)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 4282)
+Completed 500 Internal Server Error in 8ms (Allocations: 5122)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `game' for #<ActionView::Base:0x00000000010b58>):
+    1: <h1>Top#index</h1>
+    2: <% @document_title="じゃんけんゲーム" %>
+    3: <p><% link_to "ゲーム開始", controller: game, action: :start %></p>
+  
+app/views/top/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:47:19 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4208)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 4272)
+Completed 500 Internal Server Error in 9ms (Allocations: 5328)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `game' for #<ActionView::Base:0x00000000010f90>):
+    1: <h1>Top#index</h1>
+    2: <%= @document_title="じゃんけんゲーム" %>
+    3: <p><% link_to "ゲーム開始", controller: game, action: :start %></p>
+  
+app/views/top/index.html.erb:3
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:48:19 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.9ms | Allocations: 325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4160)
+Completed 200 OK in 11ms (Views: 10.1ms | Allocations: 5259)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:48:34 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 4214)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 4278)
+Completed 500 Internal Server Error in 9ms (Allocations: 5118)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `game' for #<ActionView::Base:0x00000000011558>):
+    1: <h1>Top#index</h1>
+    2: <% @document_title="じゃんけんゲーム" %>
+    3: <p><%= link_to "ゲーム開始", controller: game, action: :start %></p>
+  
+app/views/top/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:49:01 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 4199)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 4263)
+Completed 500 Internal Server Error in 8ms (Allocations: 5319)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `game' for #<ActionView::Base:0x00000000011990>):
+    1: <% @document_title="じゃんけんゲーム" %>
+    2: <p><%= link_to "ゲーム開始", controller: game, action: :start %></p>
+  
+app/views/top/index.html.erb:2
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:49:21 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4061)
+Completed 200 OK in 11ms (Views: 9.9ms | Allocations: 5145)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:49:23 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 1.0ms | Allocations: 452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4091)
+Completed 200 OK in 11ms (Views: 10.3ms | Allocations: 4962)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:49:25 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.5ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3938)
+Completed 200 OK in 9ms (Views: 9.0ms | Allocations: 4316)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:49:26 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 3.6ms | Allocations: 325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 4681)
+Completed 200 OK in 31ms (Views: 27.9ms | Allocations: 5199)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:49:28 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 4402)
+Completed 200 OK in 10ms (Views: 9.4ms | Allocations: 4783)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:49:29 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.7ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 4547)
+Completed 200 OK in 12ms (Views: 11.2ms | Allocations: 4932)
+
+
+Started GET "/game/result?hand=2" for 127.0.0.1 at 2022-08-01 16:49:30 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.3ms | Allocations: 152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4500)
+Completed 200 OK in 10ms (Views: 9.1ms | Allocations: 4892)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:49:31 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.4ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3938)
+Completed 200 OK in 9ms (Views: 8.7ms | Allocations: 4316)
+
+
+Started GET "/game/result?hand=0" for 127.0.0.1 at 2022-08-01 16:49:33 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"0"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.3ms | Allocations: 152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 4509)
+Completed 200 OK in 11ms (Views: 10.1ms | Allocations: 4901)
+
+
+Started GET "/game/result?hand=0" for 127.0.0.1 at 2022-08-01 16:50:16 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"0"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.8ms | Allocations: 330)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4159)
+Completed 200 OK in 12ms (Views: 10.7ms | Allocations: 5258)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:50:17 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 1.0ms | Allocations: 452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 4835)
+Completed 200 OK in 13ms (Views: 12.1ms | Allocations: 5338)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:50:18 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.3ms | Allocations: 154)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4500)
+Completed 200 OK in 10ms (Views: 9.9ms | Allocations: 4893)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:50:19 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2699)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2794)
+Completed 500 Internal Server Error in 7ms (Allocations: 4170)
+
+
+  
+ActionView::Template::Error (undefined method `game' for #<TopController:0x00000000012250>):
+    1: <% @document_title="じゃんけんゲーム" %>
+    2: <p><%= link_to "ゲーム開始", controller::game, action: :start %></p>
+  
+app/views/top/index.html.erb:2
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:55:09 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2600)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2664)
+Completed 500 Internal Server Error in 4ms (Allocations: 3011)
+
+
+  
+ActionView::Template::Error (undefined method `game' for #<TopController:0x00000000012660>):
+    1: <% @document_title="じゃんけんゲーム" %>
+    2: <p><%= link_to "ゲーム開始", controller::game, action: :start %></p>
+  
+app/views/top/index.html.erb:2
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:55:10 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2600)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2664)
+Completed 500 Internal Server Error in 4ms (Allocations: 3010)
+
+
+  
+ActionView::Template::Error (undefined method `game' for #<TopController:0x00000000012930>):
+    1: <% @document_title="じゃんけんゲーム" %>
+    2: <p><%= link_to "ゲーム開始", controller::game, action: :start %></p>
+  
+app/views/top/index.html.erb:2
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:55:37 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2600)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2664)
+Completed 500 Internal Server Error in 3ms (Allocations: 3010)
+
+
+  
+ActionView::Template::Error (undefined method `game' for #<TopController:0x00000000012c00>):
+    1: <% @document_title="じゃんけんゲーム" %>
+    2: <p><%= link_to "ゲーム開始", controller::game, action: :start %></p>
+  
+app/views/top/index.html.erb:2
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:55:37 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2599)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2663)
+Completed 500 Internal Server Error in 3ms (Allocations: 3009)
+
+
+  
+ActionView::Template::Error (undefined method `game' for #<TopController:0x00000000012ed0>):
+    1: <% @document_title="じゃんけんゲーム" %>
+    2: <p><%= link_to "ゲーム開始", controller::game, action: :start %></p>
+  
+app/views/top/index.html.erb:2
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-01 16:55:42 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.3ms | Allocations: 161)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3812)
+Completed 200 OK in 9ms (Views: 8.7ms | Allocations: 4202)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:55:44 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2599)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2663)
+Completed 500 Internal Server Error in 4ms (Allocations: 3009)
+
+
+  
+ActionView::Template::Error (undefined method `game' for #<TopController:0x000000000132b8>):
+    1: <% @document_title="じゃんけんゲーム" %>
+    2: <p><%= link_to "ゲーム開始", controller::game, action: :start %></p>
+  
+app/views/top/index.html.erb:2
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:56:26 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4061)
+Completed 200 OK in 12ms (Views: 11.2ms | Allocations: 5145)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-01 16:56:27 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 1.2ms | Allocations: 454)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4828)
+Completed 200 OK in 15ms (Views: 13.0ms | Allocations: 5700)
+
+
+Started GET "/game/result?hand=key" for 127.0.0.1 at 2022-08-01 16:56:29 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"key"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 1.0ms | Allocations: 325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4674)
+Completed 200 OK in 12ms (Views: 10.8ms | Allocations: 5192)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-01 16:56:30 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3772)
+Completed 200 OK in 9ms (Views: 8.7ms | Allocations: 4150)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-02 15:02:15 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 73.4ms | Allocations: 12587)
+Completed 200 OK in 95ms (Views: 80.7ms | ActiveRecord: 0.0ms | Allocations: 15222)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-02 15:02:17 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 1.3ms | Allocations: 468)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4613)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 5498)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-02 15:02:18 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 0.8ms | Allocations: 360)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4582)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 5110)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2022-08-02 15:02:42 +0900
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/tomohiko-kuzuba/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-6.1.6.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/tomohiko-kuzuba/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-6.1.6.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/tomohiko-kuzuba/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/actionpack-6.1.6.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [30 times] (Duration: 6.7ms | Allocations: 3521)
+  Rendered /Users/tomohiko-kuzuba/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/actionpack-6.1.6.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 4.4ms | Allocations: 1171)
+  Rendered /Users/tomohiko-kuzuba/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-6.1.6.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 14.8ms | Allocations: 8034)
+  Rendered layout /Users/tomohiko-kuzuba/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-6.1.6.1/lib/rails/templates/layouts/application.html.erb (Duration: 15.4ms | Allocations: 8256)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 9458)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-02 15:02:51 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 2.6ms | Allocations: 389)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 4170)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 5689)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-02 15:35:45 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 6487)
+Completed 200 OK in 29ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 9123)
+
+
+Started GET "/game/start" for 127.0.0.1 at 2022-08-02 15:35:47 +0900
+Processing by GameController#start as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering game/start.html.erb within layouts/application
+  Rendered game/start.html.erb within layouts/application (Duration: 0.9ms | Allocations: 465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3936)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 4817)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-02 15:35:48 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 1.1ms | Allocations: 410)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4637)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 5165)
+
+
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-02 15:37:21 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2085)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2154)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 4777)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    10: <p>
+    11:     <%= link_to "トップページへ", root_path %>
+    12:     <%= link_to "もう一度", action: :start %>
+    13:     <%= root_path.is_a? %>
+    14:     <%= game_start_path(1).is_a? %>
+    15: </p>
+  
+app/views/game/result.html.erb:13:in `is_a?'
+app/views/game/result.html.erb:13
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-02 15:38:40 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1326)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1391)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2564)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    10: <p>
+    11:     <%= link_to "トップページへ", root_path %>
+    12:     <%= link_to "もう一度", action: :start %>
+    13:     <% a = root_path.is_a? %>
+    14:     <%= a %>
+    15:     <%= game_start_path(1).is_a? %>
+    16: </p>
+  
+app/views/game/result.html.erb:13:in `is_a?'
+app/views/game/result.html.erb:13
+Started GET "/game/result?hand=1" for 127.0.0.1 at 2022-08-02 15:38:57 +0900
+Processing by GameController#result as HTML
+  Parameters: {"hand"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering game/result.html.erb within layouts/application
+  Rendered game/result.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1306)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1371)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2449)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    10: <p>
+    11:     <%= link_to "トップページへ", root_path %>
+    12:     <%= link_to "もう一度", action: :start %>
+    13:     <% a = root_path.kind_of? %>
+    14:     <%= a %>
+    15:     <%= game_start_path(1).is_a? %>
+    16: </p>
+  
+app/views/game/result.html.erb:13:in `kind_of?'
+app/views/game/result.html.erb:13
