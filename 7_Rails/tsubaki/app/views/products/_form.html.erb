@@ -1,0 +1,23 @@
+<% if @product.errors.any? %>
+<ul>
+    <% @product.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+</ul>
+<% end %>
+
+<%= form_with model: @product do |f| %>
+<table>
+    <tr>
+        <th><%= f.label :name %></th>
+        <th><%= f.text_field :name %></th>
+    </tr>
+    <tr>
+        <th><%= f.label :price %></th>
+        <th><%= f.text_field :price %></th>
+    </tr>
+    <tr>
+        <td colspan="2"><%= f.submit 'Save Product' %></td>
+    </tr>
+</table>
+<% end %>

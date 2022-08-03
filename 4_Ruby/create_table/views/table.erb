@@ -67,7 +67,6 @@
           end
         end
         box[$sum_box_min_index].push(value)
-        p box
       end
 
       # 5. 全ての要素が入れ終わったら、1次元リストにし、同時にハッシュから要素を取り出す作業にする
@@ -100,6 +99,7 @@
   <h3>リーグ<%= index+1 %></h3>
   </table>
     <table class="table table-hover" style="text-align:center">
+    <%# <table class="table table-bordered" style="text-align:center"> %>
       <% (team_member+1).times do |i| %>
         <tr>
         <% (team_member+1).times do |j| %>

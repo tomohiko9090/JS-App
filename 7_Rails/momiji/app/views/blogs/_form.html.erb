@@ -1,0 +1,6 @@
+<%= form_with model: @blog do |f| %>
+    <p>title<br><%= f.text_field :title %></p>
+    <p>name<br><%= f.text_field :name %></p>
+    <p>body<br><%= f.area_field :body %></p>
+    <p><%= f.submit %> | <%= link_to "cancel", blogs_path %></p>
+<% end %>

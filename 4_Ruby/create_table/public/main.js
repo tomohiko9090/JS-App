@@ -13,23 +13,6 @@ function add_human(human_num){
   human.innerHTML = human_all
 }
 
-// function add_box(box_num){
-//   let box_all = "";  
-//   for (i=1; i<=box_num; i++){
-//     box_text = `<div class="frame">`
-//     if (i%5==0){
-//       box_text += `</div><span class="boxcreate">リーグ` + i + `</span><div class="frame">`
-//     }
-//     else{
-//       box_text += `<span class="boxcreate">リーグ` + i + "</span>"
-//     }
-//     box_text += `</div>`
-    
-//     box_all = box_all + box_text
-//   }
-//   box.innerHTML = box_all
-// }
-
 function add_box(box_num){
   let box_all = "";  
   for (i=1; i<=box_num; i++){

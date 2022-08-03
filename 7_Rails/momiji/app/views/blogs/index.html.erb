@@ -1,0 +1,26 @@
+<h2>Post List</h2>
+<p>
+<%= form_with url: blogs_path, method: :get do |f| %>
+    Keyword search in body <br>
+    <%= f.text_field :keyword, value: params[:keyword], placeholder: '検索ワード' %><br>
+    <%= f.submit '検索', name:nil %>
+<% end %>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>name</th>
+        <th>body</th>
+    </tr>
+    <% @blogs.each do |b| %>
+    <tr>
+        <td><%= b.id %></td>
+        <td><%= link_to b.title, blog_path(b) %></td>
+        <td><%= b.name %></td>
+        <td><%= b.body %></td>
+    </tr>
+    <% end %>
+</table>
+<%= link_to "add", new_blog_path %>
