@@ -1,5 +1,4 @@
 <h2><%= @blog.title %></h2>
-<p><%= @blogs %></p>
 <table class="table table-bordered">
     <tr><th>title</th><td><%= @blog.title %></td></tr>
     <tr><th>name</th><td><%= @blog.name %></td></tr>
@@ -8,5 +7,6 @@
     <tr><th>updated at</th><td><%= @blog.updated_at %></td></tr>
 </table>
 <p>
-    <%= link_to "Edit", edit_blog_path(@blog) %> | <%= link_to "Back", blogs_path %>
+    <%= link_to "編集", edit_blog_path(@blog) %> | <%= link_to "トップに戻る", blogs_path %> | 
+    <%= link_to "削除", blog_path(@blog), method: :delete, data:{confirm: "本当に削除しますか"} %> 
 </p>

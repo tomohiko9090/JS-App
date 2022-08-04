@@ -1,0 +1,10 @@
+<h3>ログイン画面</h3>
+<%= form_with(url: login_path, scope: :session) do |f| %>
+<dl>
+    <dt>E-mails</dt>
+    <dd><%= f.email_field :email %></dd>
+    <dt>パスワード</dt>
+    <dd><%= f.password_field :password %></dd>
+</dl>
+<%= f.submit "ログイン" %>
+<% end %>

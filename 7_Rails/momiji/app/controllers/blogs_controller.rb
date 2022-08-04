@@ -2,13 +2,14 @@ class BlogsController < ApplicationController
   def index
     keyword = params[:keyword]
     @blogs = Blog.order(:id)
-    if keyword.present?
+    if keyword.present? #空白かnilでtrue判定
       @blogs = @blogs.where('body LIKE ?', "%#{keyword}%")
     end
   end
 
   def show
     @blog = Blog.find(params[:id])
+    p @blog 
   end
 
   def edit
@@ -37,14 +38,12 @@ class BlogsController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @blog = Blog.find(params[:id])
-  #   if @blog.destroy
-  #     redirect_to blogs_path
-  #   else
-  #     render 'destroy'
-  #   end
-  # end
+
+  def destroy
+    @blog = Blog.find(params[:id])
+    @blog.destroy
+    redirect_to blogs_path
+  end
 
   private
   def blog_params

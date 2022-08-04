@@ -1,0 +1,15 @@
+<h3>会員登録</h3>
+<%= form_with(model: @user, url: signup_path) do |f| %>
+
+<dl>
+    <dt>名前</dt>
+    <dd><%= f.text_field :name %></dd>
+    <dt>E-mail</dt>
+    <dd><%= f.text_field :email %></dd>
+    <dt>パスワード</dt>
+    <dd><%= f.password_field :password %></dd>
+    <dt>パスワード（確認）</dt>
+    <dd><%= f.password_field :password_confirmation %></dd>
+</dl>
+<%= f.submit "会員登録" %>
+<% end %>
