@@ -1,2 +1,35 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<h3>書籍詳細</h3>
+<dl>
+    <dt>登録者</dt>
+    <dd><%= @book.user.name %></dd>
+
+    <dt>タイトル</dt>
+    <dd><%= @book.title %></dd>
+
+    <dt>著者</dt>
+    <dd><%= @book.author %></dd>
+
+    <dt>出版社</dt>
+    <dd><%= @book.publisher %></dd>
+
+    <dt>感想</dt>
+    <dd><%= @book.review %></dd>
+
+</dl>
+
+<hr>
+<% if @book.user_id == current_user.id %>
+    <%= link_to "編集", edit_book_path(@book) %>
+    |
+    <%= link_to "削除", book_path(@book), method: :delete, data: {confirm: "削除しますか？"} %>
+<% else %>
+    <% if !current_user.like?(@book.id) %>
+        <%= form_with url: like_path(@book.id) do |f| %>
+            <%= f.submit "お気に入り登録" %>
+        <% end %>
+    <% else %>
+        <%= form_with url: unlike_path(@book.id), method: :delete do |f| %>
+            <%= f.submit "お気に入り解除" %>
+        <% end %>
+    <% end %>
+<% end %>

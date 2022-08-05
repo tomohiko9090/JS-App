@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
   before_action :require_logged_in
   before_action :set_book, only: [:show, :edit, :update, :destroy]
-  before_action :corrent_user, only: [:edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
   def index
     @books = Book.all
   end
@@ -45,7 +45,11 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(:title, :auther, :publisher, :review)
+    params.require(:book).permit(:title, :author, :publisher, :review)
+  end
+
+  def set_book
+    @book = Book.find(params[:id])
   end
 
   def correct_user

@@ -1,2 +1,6 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<h3>書籍の編集</h3>
+<%= form_with model: @book do |f| %>
+    <%= render "form", f: f %>
+    <%= f.submit "更新する" %>
+    <%= link_to "キャンセル", book_path(@book) %>
+<% end %>

@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
-  before_action :require_logged_in, only: [:show]
+  before_action :require_logged_in, only: [:show] #showアクションの前に、require_logged_inアクションを実行
   before_action :already_logged_in, only: [:new, :create]
 
   def show
     @user = current_user
+    @books = current_user.books.all
   end
 
   def new

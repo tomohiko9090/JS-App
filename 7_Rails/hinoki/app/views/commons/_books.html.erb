@@ -1,0 +1,18 @@
+<table>
+    <tr>
+        <th>投稿者</th>
+        <th>タイトル</th>
+        <th>著者</th>
+        <th>出版社</th>
+        <th>感想</th>
+    </tr>
+    <% @books.each do |book| %>
+    <tr>
+        <td><%= book.user.name %></td>
+        <td><%= link_to book.title, book_path(book) %></td>
+        <td><%= book.author %></td>
+        <td><%= book.publisher %></td>
+        <td><%= "有り" if book.review.present? %></td>
+    </tr>
+    <% end %>
+</table>

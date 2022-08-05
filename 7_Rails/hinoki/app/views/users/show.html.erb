@@ -1,1 +1,3 @@
-<h3><%= @user.name %>さーん、こんちゃ</h3>
+<h3><%= @user.name %>さんの蔵書</h3>
+<%= link_to "新規登録", new_book_path %>
+<%= render "commons/books" %>

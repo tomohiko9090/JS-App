@@ -1,0 +1,15 @@
+<dl>
+
+    <dt>タイトル</dt>
+    <dd><%= f.text_field :title, value: @book.title %></dd>
+
+    <dt>著者</dt>
+    <dd><%= f.text_field :author, value: @book.author %></dd>
+
+    <dt>出版社</dt>
+    <dd><%= f.text_field :publisher, value: @book.publisher %></dd>
+
+    <dt>感想</dt>
+    <dd><%= f.text_area :review, value: @book.review %></dd>
+
+</dl>

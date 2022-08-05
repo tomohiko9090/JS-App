@@ -8,4 +8,11 @@ Rails.application.routes.draw do
   post "login", to: "sessions#create"
 
   delete "logout", to: "sessions#destroy"
+
+  resources :books
+
+  # お気に入り
+  get "likes", to: "likes#index", as: "likes"
+  post "like/:book_id", to: "likes#create", as: "like"
+  delete "like/:book_id", to: "likes#destroy", as: "unlike"
 end
