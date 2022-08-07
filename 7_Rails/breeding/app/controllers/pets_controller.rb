@@ -1,7 +1,9 @@
 class PetsController < ApplicationController
-  def index
+def
+  def new
   end
 
-  def new
+  def show
+    @pet = Pet.find(params[:id])
   end
 end
