@@ -1,0 +1,14 @@
+<h1>オーナー一覧</h1>
+<table>
+    <tr>
+        <th>名称</th>
+    </tr>
+    <% @owners.each do |o| %>
+    <tr>
+        <td><%= o.owner_name %></td>
+        <td><%= link_to "ペット一覧", pets_index_path(o.id)%></td>
+    </tr>
+    <% end %>
+</table>
+
+<p><%= link_to 'ユーザーの追加' %></p>

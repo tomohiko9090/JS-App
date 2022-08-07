@@ -14,7 +14,7 @@
         <th>name</th>
         <th>body</th>
     </tr>
-    <% @blogs.e書籍のノアノアh do |b| %>
+    <% @blogs.each do |b| %>
     <tr>book
         <td><%= link_to b.id, blog_path(b) %></td>
         <td><%= link_to b.title, blog_path(b) %></td>

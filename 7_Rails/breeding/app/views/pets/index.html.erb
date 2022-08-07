@@ -1,0 +1,15 @@
+<h1><%= @owner %>オーナーのペット一覧</h1>
+<table>
+    <tr>
+        <th>種類</th>
+        <td><%= @pet.kind %></td>
+    </tr>
+    <tr>
+        <th>名前</th>
+        <td><%= @pet.name %></td>
+    </tr>
+</table>
+<%#= link_to "編集", edit_pet_path %>
+<%#= link_to "この製品の削除", product_path(@product),
+method: :delete, data:{confirm: "本当に削除しますか"} %> 
+<%= link_to "オーナー一覧に戻る", owners_path %>
