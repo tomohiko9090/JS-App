@@ -1,24 +1,68 @@
-# names = ["fds", "fdas", "asdf", "fdggs", "gfd", "asdfs", "fdsgs", "hgfdh", "das"]
-# strengths = ["3", "3", "2", "7", "9", "9", "3", "8", "3"]
+# # 1コートしかなかった場合
+# n = gets.chomp.to_i
+# p cmb = [*1..n].combination(4).to_a
+# puts 
 
-# # p ary = [strengths, names].transpose #転置
+# cmb.each do |team|
 
-# # strength_name_dict = Hash[*ary.flatten]
-# # p strength_name_dict
+#   p team
+
+#   team[1], team[2] = team[2], team[1]
+#   p team
+
+#   team[1], team[3] = team[1], team[3]
+#   p team
+
+# end
 
 
-# a = [["one", "two", "three"], [1, 2, 3]]
-# p Hash[*a.transpose.flatten]
+# 2コートあった場合5
 
-# # name_list = {}
-# # name_list.map { |user| [names, strengths] }.to_h
-# # p name_list
+# n = gets.chomp.to_i
+# cmb = [*1..9].combination(4).to_a
 
-# # strength_sort_dict = strength_name_dict.sort 
+# box = []
 
-# # p strength_sort_dict
+# loop do
 
-# # box_2 = [1,1,2,3]
-# # p box_2.index(box_2.min)
+#   pick = cmb.shift
 
-# # p [[], [], []].delete_at(2)
+#   if cmb.length == 0
+#     break
+#   end
+
+#   cmb.each do |watch|
+#     watch.each do |i|
+#       unless pick.include?(i)
+#         box.push([pick, watch])
+#         cmb.delete(watch)
+#       end
+#       break
+#     end
+#     break
+#   end
+
+#   if cmb.length == 0
+#     break
+#   end
+
+# end
+
+# p box
+
+
+# cmb
+
+# cmb.each do |team|
+
+
+#   p team
+
+#   team[1], team[2] = team[2], team[1]
+#   p team
+
+#   team[1], team[3] = team[1], team[3]
+#   p team
+
+# end
+
