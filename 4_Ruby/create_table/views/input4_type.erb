@@ -45,7 +45,6 @@
     <% names.each do |name|%>
     <input type="hidden" name="name[]" value="<%= ERB::Util.html_escape(name) %>">
     <% end %>  
-
     <% strengths.each do |strength|%>
     <input type="hidden" name="strength[]" value="<%= ERB::Util.html_escape(strength) %>">
     <% end %>  
@@ -55,6 +54,7 @@
       <button type="submit" class="btn btn-success" style="float: right;">　　表を作る　　</button>
     </span>
 </form>
+
 
 <span>
   <form action="/input3_strength" method="post">
