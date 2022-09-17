@@ -13,16 +13,7 @@
     <header><a href="/">目次へ</a></header>
 <!-- id="app"でVueアプリケーションのエントリーポイント -->
 <div id="app">
-    <!-- <input 
-        type="text" 
-        v-on:input="message = $event.target.value"
-        v-bind:value="message"
-    > -->
-    <!-- <input 
-        type="text" 
-        @input="name = $event.target.value"
-        :value="name"
-    > -->
+    
     <h3>1.双方向ディバイディング</h3>
     <input type="text" v-model="message">
     <p>{{ message }}</p>
