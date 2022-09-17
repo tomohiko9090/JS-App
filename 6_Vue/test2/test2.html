@@ -11,12 +11,12 @@
 </head>
 <body>
     <header><a href="/">目次へ</a></header>
-<!-- id="app"でVueアプリケーションのエントリーポイント -->
+<main>
 <div id="app">
-    <form action="class-form" @submit.prevent="addBook()">
+    <form @submit.prevent="addBook()">
         <input type="text" v-model="newBook.title" placeholder="タイトル">
         <input type="text" v-model="newBook.author" placeholder="著者">
-        <botton type="submit">登録</botton>
+        <button type="submit">登録</button>
     </form>
   
     <table>
@@ -28,13 +28,16 @@
         <tr v-for="(book, key) in books" :key="key">
             <td>{{ book.title }}</td>
             <td>{{ book.author }}</td>
-            <td><button @click="deleteBook(key)">&times;</button></td>
+            <td><button @click="deleteBook(key)">×</button></td>
         </tr>
    </table>
   </div>
+</main>    
+
+<footer>
+
+</footer>
+
 <script src="main.js"></script>
 </body>
 </html>
-
-
-

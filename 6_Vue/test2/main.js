@@ -2,28 +2,25 @@ const app = Vue.createApp({
     data(){
         return {
             newBook: {title: "", author: ""},
-            books: [],
+            books: [
+                {title: '坊っちゃん', author: '夏目漱石'},
+                {title: '蟹工船', author: '志賀直哉'},
+                {title: '銀河鉄道の夜', author: '宮沢賢治'},
+              ],
         }
     },
-
-    computed: {
-        area(){
-            return this.base * this.height / 2
-        },
-        circum(){
-            return this.radius * 2 * 3.14
-        },
-        square(){
-            return this.radius ** 2 * 3.14
-        },
-    },
-
-    // メソッドオプション
     methods:{
-        doJanken(key){
-            this.you = key
-            this.com = parseInt(Math.random() *  3) //0~2の乱数
+    // 書籍を追加
+    addBook() {
+        this.books.push(this.newBook)
+        // this.newBook = { title: '', author: '' }
+      },
+      // 書籍を削除
+      deleteBook(key) {
+        if (confirm('本当に削除しますか？')) {
+          this.books.splice(key, 1)
         }
+      }
     }
 })
 
